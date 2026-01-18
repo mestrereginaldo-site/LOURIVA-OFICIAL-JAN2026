@@ -319,7 +319,7 @@
             z-index: 1001;
         }
 
-        /* Banner Slider */
+        /* Banner Slider - CORREÇÃO: Ajuste para texto não ficar coberto pelas setas em mobile */
         .banner-section {
             margin-top: 100px;
             padding: 0;
@@ -360,7 +360,7 @@
             opacity: 1;
         }
 
-        /* IMAGENS DO BANNER - CORRIGIDO BANNER 4 COM IMAGEM */
+        /* IMAGENS DO BANNER */
         .banner-slide:nth-child(1) {
             background-image: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
         }
@@ -374,7 +374,6 @@
         }
 
         .banner-slide:nth-child(4) {
-            /* Imagem adicionada conforme solicitado */
             background-image: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1589994965851-a8f479c573a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
         }
 
@@ -541,7 +540,7 @@
             box-shadow: 0 10px 20px rgba(201, 169, 89, 0.3);
         }
 
-        /* Sobre - CORREÇÃO: Imagem responsiva e substituída */
+        /* Sobre */
         .sobre-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -554,7 +553,6 @@
             overflow: hidden;
             box-shadow: var(--shadow-lg);
             height: 550px;
-            /* FOTO DE ESCRITÓRIO SÉRIO DE ADVOGADO substituída conforme solicitado - IMAGEM CORRIGIDA */
             background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
@@ -583,7 +581,7 @@
             font-size: 1.3rem;
         }
 
-        /* Areas of Practice */
+        /* Areas of Practice - CORREÇÃO: Adicionadas mais áreas */
         .areas-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -627,13 +625,24 @@
             background-image: url('https://images.unsplash.com/photo-1589216532372-1c2a367900d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80');
         }
 
-        /* CORREÇÃO: Imagem adicionada na Área 2 (Trabalhista) */
         .area-card:nth-child(2) .area-image {
             background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=1469&q=80');
         }
 
         .area-card:nth-child(3) .area-image {
             background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+        }
+        
+        .area-card:nth-child(4) .area-image {
+            background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+        }
+        
+        .area-card:nth-child(5) .area-image {
+            background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+        }
+        
+        .area-card:nth-child(6) .area-image {
+            background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
         }
 
         .area-content {
@@ -680,7 +689,7 @@
             font-size: 0.9rem;
         }
 
-        /* Articles - CORREÇÃO: Imagem adicionada no artigo 4 */
+        /* Articles - CORREÇÃO: Imagem do artigo 4 corrigida */
         .articles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -720,7 +729,7 @@
         }
         
         .article-card:nth-child(4) .article-image {
-            /* CORREÇÃO: Imagem adicionada para o artigo "Direito de Arrependimento e Compras Online" - IMAGEM CORRIGIDA */
+            /* CORREÇÃO: Imagem do artigo 4 corrigida */
             background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
         }
 
@@ -849,7 +858,7 @@
             font-weight: bold;
         }
 
-        /* Calculators - ATUALIZADO: Nova aba para Benefício Previdenciário */
+        /* Calculators */
         .calculator-section {
             background-color: var(--light-bg);
         }
@@ -1096,7 +1105,7 @@
             animation: fadeInUp 0.8s ease forwards;
         }
 
-        /* Responsive - CORREÇÃO COMPLETA: Responsividade melhorada */
+        /* Responsive - CORREÇÃO: Ajuste para banner em mobile */
         @media (max-width: 1200px) {
             .banner-slide {
                 padding: 0 60px;
@@ -1142,7 +1151,6 @@
             .areas-grid { grid-template-columns: repeat(2, 1fr); }
             .contact-grid { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
-            /* CORREÇÃO: Sobre responsivo melhorado */
             .sobre-container {
                 grid-template-columns: 1fr;
                 gap: 50px;
@@ -1165,12 +1173,28 @@
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
             .banner-slides { height: 550px; }
-            .banner-slide { padding: 0 30px; }
-            .slide-content h1 { font-size: 2.5rem; }
-            .slide-content p { font-size: 1.1rem; }
-            .banner-prev, .banner-next { width: 50px; height: 50px; font-size: 1.2rem; }
-            .banner-prev { left: 20px; }
-            .banner-next { right: 20px; }
+            .banner-slide { 
+                padding: 0 30px; 
+                align-items: flex-start;
+                padding-top: 100px;
+            }
+            .slide-content h1 { 
+                font-size: 2.5rem; 
+                margin-bottom: 15px;
+            }
+            .slide-content p { 
+                font-size: 1.1rem; 
+                margin-bottom: 25px;
+            }
+            /* CORREÇÃO: Ajuste das setas do banner para não cobrir texto */
+            .banner-prev, .banner-next { 
+                width: 50px; 
+                height: 50px; 
+                font-size: 1.2rem; 
+                top: 60%;
+            }
+            .banner-prev { left: 10px; }
+            .banner-next { right: 10px; }
             .areas-grid, .articles-grid, .features-grid { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; }
             .contact-form {
@@ -1179,7 +1203,6 @@
             .calculator-content {
                 padding: 30px;
             }
-            /* CORREÇÃO: Ajuste adicional para a imagem do sobre em telas menores */
             .sobre-img {
                 height: 350px;
             }
@@ -1206,6 +1229,7 @@
             }
             .banner-slide {
                 padding: 0 20px;
+                padding-top: 80px;
             }
             .slide-content h1 {
                 font-size: 2rem;
@@ -1224,6 +1248,12 @@
                 width: 50px;
                 height: 50px;
                 font-size: 1.2rem;
+            }
+            .banner-prev, .banner-next {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+                top: 65%;
             }
         }
     </style>
@@ -1269,7 +1299,7 @@
                             <p>Garanta seus direitos com quem entende. Aposentadorias, benefícios e revisões com atendimento personalizado e eficiente.</p>
                             <div class="cta-buttons">
                                 <a href="#contato" class="btn">Agendar Consulta</a>
-                                <a href="#calculadoras" class="btn btn-outline" style="color: white; border-color: white;">Simular Benefício</a>
+                                <a href="#calculadoras" class="btn btn-outline simular-beneficio" style="color: white; border-color: white;">Simular Benefício</a>
                             </div>
                         </div>
                     </div>
@@ -1421,6 +1451,54 @@
                                 <li><i class="fas fa-check"></i> Direito de família (divórcio, pensão, guarda)</li>
                                 <li><i class="fas fa-check"></i> Inventário e partilha de bens</li>
                                 <li><i class="fas fa-check"></i> Usucapião e direito de propriedade</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- NOVA ÁREA: Direito do Consumidor -->
+                    <div class="area-card fade-in">
+                        <div class="area-image"></div>
+                        <div class="area-content">
+                            <h3><i class="fas fa-shopping-cart area-icon"></i> Direito do Consumidor</h3>
+                            <p>Proteção dos direitos do consumidor em relações de consumo, produtos defeituosos e práticas abusivas.</p>
+                            <ul class="area-list">
+                                <li><i class="fas fa-check"></i> Vícios de produtos e serviços</li>
+                                <li><i class="fas fa-check"></i> Práticas comerciais abusivas</li>
+                                <li><i class="fas fa-check"></i> Cobranças indevidas</li>
+                                <li><i class="fas fa-check"></i> Responsabilidade civil do fornecedor</li>
+                                <li><i class="fas fa-check"></i> Direito de arrependimento</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- NOVA ÁREA: Direito Criminal -->
+                    <div class="area-card fade-in">
+                        <div class="area-image"></div>
+                        <div class="area-content">
+                            <h3><i class="fas fa-balance-scale area-icon"></i> Direito Criminal</h3>
+                            <p>Defesa em processos criminais, liberdade provisória, habeas corpus e recursos criminais.</p>
+                            <ul class="area-list">
+                                <li><i class="fas fa-check"></i> Defesa em processos criminais</li>
+                                <li><i class="fas fa-check"></i> Habeas corpus e liberdade provisória</li>
+                                <li><i class="fas fa-check"></i> Crimes contra o patrimônio</li>
+                                <li><i class="fas fa-check"></i> Crimes contra a pessoa</li>
+                                <li><i class="fas fa-check"></i> Recursos e revisão criminal</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- NOVA ÁREA: Direito Digital e Proteção de Dados -->
+                    <div class="area-card fade-in">
+                        <div class="area-image"></div>
+                        <div class="area-content">
+                            <h3><i class="fas fa-laptop-code area-icon"></i> Direito Digital</h3>
+                            <p>Proteção de dados pessoais, crimes cibernéticos, contratos eletrônicos e compliance digital.</p>
+                            <ul class="area-list">
+                                <li><i class="fas fa-check"></i> LGPD - Lei Geral de Proteção de Dados</li>
+                                <li><i class="fas fa-check"></i> Crimes cibernéticos</li>
+                                <li><i class="fas fa-check"></i> Contratos eletrônicos</li>
+                                <li><i class="fas fa-check"></i> Compliance digital</li>
+                                <li><i class="fas fa-check"></i> Direitos autorais na internet</li>
                             </ul>
                         </div>
                     </div>
@@ -1861,16 +1939,18 @@
         });
 
         // CORREÇÃO: Botão "Simular Benefício" no banner leva para calculadora de benefício
-        document.querySelectorAll('a[href="#calculadoras"]').forEach(link => {
+        document.querySelectorAll('.simular-beneficio').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 
                 // Ativa a aba de Benefício Previdenciário
                 calcTabs.forEach(t => t.classList.remove('active'));
-                document.querySelector('.calculator-tab[data-target="beneficio-calc"]').classList.add('active');
+                const beneficioTab = document.querySelector('.calculator-tab[data-target="beneficio-calc"]');
+                if (beneficioTab) beneficioTab.classList.add('active');
                 
                 calculators.forEach(c => c.classList.remove('active'));
-                document.getElementById('beneficio-calc').classList.add('active');
+                const beneficioCalc = document.getElementById('beneficio-calc');
+                if (beneficioCalc) beneficioCalc.classList.add('active');
                 
                 // Rola para a seção de calculadoras
                 document.getElementById('calculadoras').scrollIntoView({ 
