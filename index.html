@@ -372,7 +372,7 @@
         }
 
         .banner-slide:nth-child(3) {
-            background-image: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1563461660947-5075664b9d8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80');
+            background-image: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
         }
 
         .banner-slide:nth-child(4) {
@@ -1196,7 +1196,130 @@
             animation: none;
         }
 
-        /* Certificados e Credenciais */
+        /* Páginas de Artigos */
+        .article-page {
+            padding-top: 140px;
+            min-height: 100vh;
+            background-color: var(--light-bg);
+        }
+
+        .article-header {
+            background-color: white;
+            padding: 60px 0;
+            box-shadow: var(--shadow);
+            margin-bottom: 60px;
+        }
+
+        .article-header .container {
+            max-width: 900px;
+        }
+
+        .article-header .article-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            font-size: 1rem;
+            color: var(--gray);
+        }
+
+        .article-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .article-header .article-author {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .article-header .article-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .article-content-page {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 60px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .article-content-page h2 {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+        }
+
+        .article-content-page h3 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .article-content-page p {
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+        }
+
+        .article-image-page {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            margin: 50px 0;
+        }
+
+        .article-quote {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            margin: 50px 0;
+            font-size: 1.4rem;
+            font-style: italic;
+            border-left: 5px solid var(--secondary);
+        }
+
+        .article-list {
+            margin: 30px 0 30px 40px;
+        }
+
+        .article-list li {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .back-to-articles {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 60px;
+            padding: 15px 30px;
+            border: 2px solid var(--primary);
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .back-to-articles:hover {
+            background-color: var(--primary);
+            color: white;
+            gap: 15px;
+        }
+
+        /* Credenciais e Reconhecimento */
         .credenciais-section {
             background-color: white;
             padding: 80px 0;
@@ -1443,6 +1566,14 @@
             .feature-card, .area-card, .article-card {
                 padding: 35px 25px;
             }
+            
+            .article-content-page {
+                padding: 40px 25px;
+            }
+            
+            .article-header h1 {
+                font-size: 2.5rem;
+            }
         }
 
         @media (max-width: 576px) {
@@ -1478,7 +1609,7 @@
     <!-- Header -->
     <header id="header">
         <div class="container header-container">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <div class="logo-icon">
                     <span>LO</span>
                 </div>
@@ -1494,12 +1625,12 @@
             
             <nav>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#areas">Áreas de Atuação</a></li>
-                    <li><a href="#artigos">Artigos</a></li>
-                    <li><a href="#calculadoras">Calculadoras</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="index.html#home">Início</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#areas">Áreas de Atuação</a></li>
+                    <li><a href="index.html#artigos">Artigos</a></li>
+                    <li><a href="index.html#calculadoras">Calculadoras</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
                 </ul>
             </nav>
             
@@ -1507,673 +1638,679 @@
         </div>
     </header>
 
-    <!-- Banner Slider - CORRIGIDO COM IMAGENS DIVERSIFICADAS -->
-    <section class="banner-section" id="home">
-        <div class="banner-slider">
-            <div class="banner-slides">
-                <!-- Slide 1 - Escritório Moderno -->
-                <div class="banner-slide active">
-                    <div class="slide-content">
-                        <h1>Defesa Jurídica Estratégica em Salvador</h1>
-                        <p>Advogado especializado em Direito Previdenciário com mais de 10 anos de experiência. OAB/BA 61.507</p>
-                        <a href="#contato" class="btn btn-secondary">Agendar Consulta</a>
-                    </div>
-                </div>
-                
-                <!-- Slide 2 - Sala de Reuniões Executiva -->
-                <div class="banner-slide">
-                    <div class="slide-content">
-                        <h1>Escritório de Advocacia com Excelência</h1>
-                        <p>Mais de 500 casos resolvidos com sucesso em Direito Previdenciário, Trabalhista, Civil e do Consumidor.</p>
-                        <a href="#sobre" class="btn btn-secondary">Conheça o Advogado</a>
-                    </div>
-                </div>
-                
-                <!-- Slide 3 - Reunião Profissional com Cliente -->
-                <div class="banner-slide">
-                    <div class="slide-content">
-                        <h1>Atendimento Personalizado e Humanizado</h1>
-                        <p>Entendemos suas necessidades jurídicas e oferecemos um atendimento diferenciado para cada caso com transparência e ética.</p>
-                        <a href="#contato" class="btn btn-secondary">Fale Conosco</a>
-                    </div>
-                </div>
-                
-                <!-- Slide 4 - Documentos Jurídicos e Tribunais -->
-                <div class="banner-slide">
-                    <div class="slide-content">
-                        <h1>Resultados que Fazem a Diferença</h1>
-                        <p>95% de taxa de sucesso em processos. Atuação estratégica focada em alcançar os melhores resultados para nossos clientes.</p>
-                        <a href="#areas" class="btn btn-secondary">Conheça Nossas Áreas</a>
-                    </div>
-                </div>
-            </div>
-            
-            <button class="banner-prev" id="bannerPrev">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="banner-next" id="bannerNext">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-            
-            <div class="banner-nav">
-                <span class="banner-dot active" data-slide="0"></span>
-                <span class="banner-dot" data-slide="1"></span>
-                <span class="banner-dot" data-slide="2"></span>
-                <span class="banner-dot" data-slide="3"></span>
-            </div>
-        </div>
-    </section>
+    <!-- Páginas de Artigos serão carregadas aqui dinamicamente -->
+    <div id="article-content"></div>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container cta-container">
-            <h2>Precisa de Assistência Jurídica?</h2>
-            <p>O Dr. Lourival Oliveira está pronto para oferecer a melhor defesa jurídica para seu caso. Entre em contato agora mesmo para uma consulta inicial.</p>
-            <div class="cta-buttons">
-                <a href="#areas" class="btn btn-secondary">
-                    <i class="fas fa-balance-scale"></i> Ver Áreas de Atuação
-                </a>
-                <a href="#contato" class="btn">
-                    <i class="fas fa-phone-alt"></i> Agendar Consulta
-                </a>
-                <a href="https://wa.me/5571981303910" class="btn btn-outline" target="_blank">
-                    <i class="fab fa-whatsapp"></i> WhatsApp (71) 98130-3910
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Credenciais -->
-    <section class="credenciais-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Credenciais e Reconhecimento</h2>
-                <p>Profissionalismo e excelência reconhecidos no meio jurídico</p>
-            </div>
-            
-            <div class="credenciais-grid">
-                <div class="credencial-item fade-in">
-                    <div class="credencial-icon">
-                        <i class="fas fa-award"></i>
+    <!-- Conteúdo Principal (Home) -->
+    <div id="main-content">
+        <!-- Banner Slider - CORRIGIDO COM IMAGENS DIVERSIFICADAS -->
+        <section class="banner-section" id="home">
+            <div class="banner-slider">
+                <div class="banner-slides">
+                    <!-- Slide 1 - Escritório Moderno -->
+                    <div class="banner-slide active">
+                        <div class="slide-content">
+                            <h1>Defesa Jurídica Estratégica em Salvador</h1>
+                            <p>Advogado especializado em Direito Previdenciário com mais de 10 anos de experiência. OAB/BA 61.507</p>
+                            <a href="#contato" class="btn btn-secondary">Agendar Consulta</a>
+                        </div>
                     </div>
-                    <h3>OAB/BA 61.507</h3>
-                    <p>Advogado ativo e em pleno exercício na Ordem dos Advogados do Brasil - Seção Bahia</p>
-                </div>
-                
-                <div class="credencial-item fade-in">
-                    <div class="credencial-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Especialização</h3>
-                    <p>Pós-graduado em Direito Previdenciário pela Universidade Salgado de Oliveira</p>
-                </div>
-                
-                <div class="credencial-item fade-in">
-                    <div class="credencial-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>+500 Casos</h3>
-                    <p>Mais de 500 processos resolvidos com sucesso em diversas áreas do direito</p>
-                </div>
-                
-                <div class="credencial-item fade-in">
-                    <div class="credencial-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>95% de Sucesso</h3>
-                    <p>Taxa de aprovação de 95% em processos judiciais, comprovando eficiência</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features -->
-    <section class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Por que Escolher o Dr. Lourival Oliveira?</h2>
-                <p>Diferenciais que garantem a excelência na prestação de serviços jurídicos</p>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <h3>Atendimento Personalizado</h3>
-                    <p>Cada cliente recebe atenção individualizada com estratégia jurídica desenvolvida especificamente para suas necessidades e objetivos.</p>
-                </div>
-                
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Resultados Comprovados</h3>
-                    <p>Mais de 10 anos de experiência e 500 casos resolvidos com sucesso em diversas áreas do direito, com 95% de taxa de sucesso.</p>
-                </div>
-                
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="fas fa-gavel"></i>
-                    </div>
-                    <h3>Especialização Previdenciária</h3>
-                    <p>Foco em Direito Previdenciário com expertise em aposentadorias, pensões, auxílio-doença, LOAS e revisões de benefícios.</p>
-                </div>
-                
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Transparência e Ética</h3>
-                    <p>Comunicação clara sobre todas as etapas do processo, honorários justos e estratégias adotadas em cada caso com total transparência.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sobre -->
-    <section id="sobre">
-        <div class="container">
-            <div class="section-header">
-                <h2>Sobre o Dr. Lourival Oliveira</h2>
-                <p>Conheça a trajetória e experiência do profissional</p>
-            </div>
-            
-            <div class="sobre-container">
-                <div class="sobre-img"></div>
-                
-                <div class="sobre-text">
-                    <h3>Experiência e Formação Acadêmica</h3>
-                    <p>Dr. Lourival Oliveira é advogado com mais de <strong>10 anos de atuação</strong> em Salvador e região, formado pela <strong>Universidade Salgado de Oliveira</strong> com especialização em <strong>Direito Previdenciário</strong>.</p>
-                    <p>Sua trajetória inclui atuação em diversas áreas do direito, com foco principal em Direito Previdenciário, onde já resolveu mais de <strong>500 casos</strong> com sucesso, alcançando uma taxa de aprovação de <strong>95%</strong>.</p>
-                    <p>Atua com ética, transparência e compromisso com os resultados, sempre buscando a melhor solução jurídica para cada cliente.</p>
                     
-                    <ul class="sobre-list">
-                        <li><i class="fas fa-check-circle"></i> <strong>10+ anos</strong> de experiência jurídica</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>500+ casos</strong> resolvidos com sucesso</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>95% de taxa</strong> de sucesso em processos</li>
-                        <li><i class="fas fa-check-circle"></i> Especialista em <strong>Direito Previdenciário</strong></li>
-                        <li><i class="fas fa-check-circle"></i> <strong>OAB/BA 61.507</strong> - Ativo e em pleno exercício</li>
-                    </ul>
+                    <!-- Slide 2 - Sala de Reuniões Executiva -->
+                    <div class="banner-slide">
+                        <div class="slide-content">
+                            <h1>Escritório de Advocacia com Excelência</h1>
+                            <p>Mais de 500 casos resolvidos com sucesso em Direito Previdenciário, Trabalhista, Civil e do Consumidor.</p>
+                            <a href="#sobre" class="btn btn-secondary">Conheça o Advogado</a>
+                        </div>
+                    </div>
                     
-                    <a href="#contato" class="btn" style="margin-top: 20px;">
-                        <i class="fas fa-calendar-alt"></i> Agendar Consulta
+                    <!-- Slide 3 - Reunião Profissional com Cliente -->
+                    <div class="banner-slide">
+                        <div class="slide-content">
+                            <h1>Atendimento Personalizado e Humanizado</h1>
+                            <p>Entendemos suas necessidades jurídicas e oferecemos um atendimento diferenciado para cada caso com transparência e ética.</p>
+                            <a href="#contato" class="btn btn-secondary">Fale Conosco</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 4 - Documentos Jurídicos e Tribunais -->
+                    <div class="banner-slide">
+                        <div class="slide-content">
+                            <h1>Resultados que Fazem a Diferença</h1>
+                            <p>95% de taxa de sucesso em processos. Atuação estratégica focada em alcançar os melhores resultados para nossos clientes.</p>
+                            <a href="#areas" class="btn btn-secondary">Conheça Nossas Áreas</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="banner-prev" id="bannerPrev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="banner-next" id="bannerNext">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="banner-nav">
+                    <span class="banner-dot active" data-slide="0"></span>
+                    <span class="banner-dot" data-slide="1"></span>
+                    <span class="banner-dot" data-slide="2"></span>
+                    <span class="banner-dot" data-slide="3"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container cta-container">
+                <h2>Precisa de Assistência Jurídica?</h2>
+                <p>O Dr. Lourival Oliveira está pronto para oferecer a melhor defesa jurídica para seu caso. Entre em contato agora mesmo para uma consulta inicial.</p>
+                <div class="cta-buttons">
+                    <a href="#areas" class="btn btn-secondary">
+                        <i class="fas fa-balance-scale"></i> Ver Áreas de Atuação
+                    </a>
+                    <a href="#contato" class="btn">
+                        <i class="fas fa-phone-alt"></i> Agendar Consulta
+                    </a>
+                    <a href="https://wa.me/5571981303910" class="btn btn-outline" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp (71) 98130-3910
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Áreas de Atuação -->
-    <section id="areas" class="areas">
-        <div class="container">
-            <div class="section-header">
-                <h2>Áreas de Atuação</h2>
-                <p>Especializações jurídicas com foco em resultados</p>
-            </div>
-            
-            <div class="areas-grid">
-                <!-- Área 1 - DESTAQUE -->
-                <div class="area-card fade-in">
-                    <div class="area-image"></div>
-                    <div class="area-content">
-                        <h3><i class="fas fa-hand-holding-usd area-icon"></i> Direito Previdenciário</h3>
-                        <p>Especialista em aposentadorias, pensões por morte, auxílio-doença, benefícios assistenciais (LOAS), revisões de benefícios e planejamento previdenciário.</p>
-                        <ul class="area-list">
-                            <li><i class="fas fa-check"></i> Aposentadorias (tempo de contribuição, idade, especial)</li>
-                            <li><i class="fas fa-check"></i> Pensão por morte e auxílio-reclusão</li>
-                            <li><i class="fas fa-check"></i> Auxílio-doença e auxílio-acidente</li>
-                            <li><i class="fas fa-check"></i> LOAS (Benefício de Prestação Continuada)</li>
-                            <li><i class="fas fa-check"></i> Revisão de benefícios previdenciários</li>
-                        </ul>
-                    </div>
+        <!-- Credenciais -->
+        <section class="credenciais-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Credenciais e Reconhecimento</h2>
+                    <p>Profissionalismo e excelência reconhecidos no meio jurídico</p>
                 </div>
                 
-                <!-- Área 2 -->
-                <div class="area-card fade-in">
-                    <div class="area-image"></div>
-                    <div class="area-content">
-                        <h3><i class="fas fa-briefcase area-icon"></i> Direito do Trabalho</h3>
-                        <p>Defesa de direitos trabalhistas, reclamações trabalhistas, rescisões indiretas, horas extras, assédio moral e acidentes de trabalho.</p>
-                        <ul class="area-list">
-                            <li><i class="fas fa-check"></i> Reclamações trabalhistas</li>
-                            <li><i class="fas fa-check"></i> Rescisões e verbas rescisórias</li>
-                            <li><i class="fas fa-check"></i> Horas extras e adicional noturno</li>
-                            <li><i class="fas fa-check"></i> Assédio moral e sexual</li>
-                            <li><i class="fas fa-check"></i> Doenças ocupacionais</li>
-                        </ul>
+                <div class="credenciais-grid">
+                    <div class="credencial-item fade-in">
+                        <div class="credencial-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>OAB/BA 61.507</h3>
+                        <p>Advogado ativo e em pleno exercício na Ordem dos Advogados do Brasil - Seção Bahia</p>
                     </div>
-                </div>
-                
-                <!-- Área 3 -->
-                <div class="area-card fade-in">
-                    <div class="area-image"></div>
-                    <div class="area-content">
-                        <h3><i class="fas fa-home area-icon"></i> Direito Civil</h3>
-                        <p>Atuação em questões contratuais, responsabilidade civil, indenizações, direito de família, sucessões, inventários e propriedade.</p>
-                        <ul class="area-list">
-                            <li><i class="fas fa-check"></i> Contratos em geral</li>
-                            <li><i class="fas fa-check"></i> Responsabilidade civil</li>
-                            <li><i class="fas fa-check"></i> Direito de família (divórcio, pensão, guarda)</li>
-                            <li><i class="fas fa-check"></i> Inventário e partilha de bens</li>
-                            <li><i class="fas fa-check"></i> Usucapião e direito de propriedade</li>
-                        </ul>
+                    
+                    <div class="credencial-item fade-in">
+                        <div class="credencial-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Especialização</h3>
+                        <p>Pós-graduado em Direito Previdenciário pela Universidade Salgado de Oliveira</p>
                     </div>
-                </div>
-                
-                <!-- Área 4 -->
-                <div class="area-card fade-in">
-                    <div class="area-image"></div>
-                    <div class="area-content">
-                        <h3><i class="fas fa-shopping-cart area-icon"></i> Direito do Consumidor</h3>
-                        <p>Defesa dos direitos do consumidor em problemas com produtos e serviços, cobranças indevidas, planos de saúde e serviços públicos.</p>
-                        <ul class="area-list">
-                            <li><i class="fas fa-check"></i> Problemas com produtos defeituosos</li>
-                            <li><i class="fas fa-check"></i> Cobranças indevidas e abusivas</li>
-                            <li><i class="fas fa-check"></i> Planos de saúde e operadoras</li>
-                            <li><i class="fas fa-check"></i> Serviços públicos essenciais</li>
-                            <li><i class="fas fa-check"></i> Voos atrasados/cancelados</li>
-                        </ul>
+                    
+                    <div class="credencial-item fade-in">
+                        <div class="credencial-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>+500 Casos</h3>
+                        <p>Mais de 500 processos resolvidos com sucesso em diversas áreas do direito</p>
                     </div>
-                </div>
-                
-                <!-- Área 5 -->
-                <div class="area-card fade-in">
-                    <div class="area-image"></div>
-                    <div class="area-content">
-                        <h3><i class="fas fa-user-shield area-icon"></i> Direito Criminal</h3>
-                        <p>Defesa criminal em todas as instâncias, habeas corpus, crimes contra a pessoa e patrimônio, tráfico de drogas e liberdade provisória.</p>
-                        <ul class="area-list">
-                            <li><i class="fas fa-check"></i> Defesa criminal</li>
-                            <li><i class="fas fa-check"></i> Habeas corpus</li>
-                            <li><i class="fas fa-check"></i> Crimes contra a pessoa</li>
-                            <li><i class="fas fa-check"></i> Crimes contra o patrimônio</li>
-                            <li><i class="fas fa-check"></i> Tráfico de drogas e associação</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Área 6 -->
-                <div class="area-card fade-in">
-                    <div class="area-image"></div>
-                    <div class="area-content">
-                        <h3><i class="fas fa-car area-icon"></i> Direito do Trânsito</h3>
-                        <p>Defesa em processos administrativos e judiciais de trânsito, cassação de CNH, infrações de trânsito e acidentes automobilísticos.</p>
-                        <ul class="area-list">
-                            <li><i class="fas fa-check"></i> Cassação e suspensão de CNH</li>
-                            <li><i class="fas fa-check"></i> Processos administrativos</li>
-                            <li><i class="fas fa-check"></i> Infrações de trânsito</li>
-                            <li><i class="fas fa-check"></i> Acidentes de trânsito</li>
-                            <li><i class="fas fa-check"></i> Recursos e defesas administrativas</li>
-                        </ul>
+                    
+                    <div class="credencial-item fade-in">
+                        <div class="credencial-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>95% de Sucesso</h3>
+                        <p>Taxa de aprovação de 95% em processos judiciais, comprovando eficiência</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Artigos -->
-    <section id="artigos" class="articles">
-        <div class="container">
-            <div class="section-header">
-                <h2>Artigos Jurídicos</h2>
-                <p>Conteúdo atualizado sobre direito e jurisprudência</p>
-            </div>
-            
-            <div class="articles-grid">
-                <!-- Artigo 1 -->
-                <div class="article-card fade-in">
-                    <div class="article-image"></div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-tag">Previdenciário</span>
-                            <span>15 Jun 2023</span>
-                        </div>
-                        <h3>Nova Reforma da Previdência: O que Mudou para o Trabalhador</h3>
-                        <p>Análise completa sobre as mudanças trazidas pela última reforma previdenciária e como afetam os direitos dos trabalhadores.</p>
-                        <a href="#" class="article-link">Ler Artigo <i class="fas fa-arrow-right"></i></a>
-                    </div>
+        <!-- Features -->
+        <section class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Por que Escolher o Dr. Lourival Oliveira?</h2>
+                    <p>Diferenciais que garantem a excelência na prestação de serviços jurídicos</p>
                 </div>
                 
-                <!-- Artigo 2 -->
-                <div class="article-card fade-in">
-                    <div class="article-image"></div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-tag">Trabalhista</span>
-                            <span>05 Jun 2023</span>
+                <div class="features-grid">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-tie"></i>
                         </div>
-                        <h3>Home Office: Direitos e Obrigações do Trabalhador</h3>
-                        <p>Guia completo sobre os direitos trabalhistas no regime de home office após as mudanças trazidas pela reforma trabalhista.</p>
-                        <a href="#" class="article-link">Ler Artigo <i class="fas fa-arrow-right"></i></a>
+                        <h3>Atendimento Personalizado</h3>
+                        <p>Cada cliente recebe atenção individualizada com estratégia jurídica desenvolvida especificamente para suas necessidades e objetivos.</p>
                     </div>
-                </div>
-                
-                <!-- Artigo 3 -->
-                <div class="article-card fade-in">
-                    <div class="article-image"></div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-tag">Civil</span>
-                            <span>28 Mai 2023</span>
+                    
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
                         </div>
-                        <h3>Inventário Extrajudicial: Vantagens e Quando é Possível</h3>
-                        <p>Como o inventário extrajudicial pode ser uma solução mais rápida e econômica para partilha de bens em comparação ao judicial.</p>
-                        <a href="#" class="article-link">Ler Artigo <i class="fas fa-arrow-right"></i></a>
+                        <h3>Resultados Comprovados</h3>
+                        <p>Mais de 10 anos de experiência e 500 casos resolvidos com sucesso em diversas áreas do direito, com 95% de taxa de sucesso.</p>
                     </div>
-                </div>
-                
-                <!-- Artigo 4 -->
-                <div class="article-card fade-in">
-                    <div class="article-image"></div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-tag">Consumidor</span>
-                            <span>20 Mai 2023</span>
+                    
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <i class="fas fa-gavel"></i>
                         </div>
-                        <h3>Direitos do Consumidor em Compras Online</h3>
-                        <p>Seus direitos nas compras pela internet: arrependimento, devolução, prazos de entrega e como agir em caso de problemas.</p>
-                        <a href="#" class="article-link">Ler Artigo <i class="fas fa-arrow-right"></i></a>
+                        <h3>Especialização Previdenciária</h3>
+                        <p>Foco em Direito Previdenciário com expertise em aposentadorias, pensões, auxílio-doença, LOAS e revisões de benefícios.</p>
+                    </div>
+                    
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Transparência e Ética</h3>
+                        <p>Comunicação clara sobre todas as etapas do processo, honorários justos e estratégias adotadas em cada caso com total transparência.</p>
                     </div>
                 </div>
             </div>
-            
-            <div class="text-center" style="margin-top: 60px;">
-                <a href="#" class="btn">Ver Todos os Artigos <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Calculadoras Jurídicas -->
-    <section id="calculadoras" class="calculators-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Calculadoras Jurídicas</h2>
-                <p>Ferramentas úteis para cálculos jurídicos</p>
-            </div>
-            
-            <div class="calculators-container">
-                <div class="calculator-tabs">
-                    <div class="calculator-tab active" data-calc="pensao">Pensão Alimentícia</div>
-                    <div class="calculator-tab" data-calc="indenizacao">Indenização Trabalhista</div>
-                    <div class="calculator-tab" data-calc="multa">Multa Rescisória</div>
+        <!-- Sobre -->
+        <section id="sobre">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Sobre o Dr. Lourival Oliveira</h2>
+                    <p>Conheça a trajetória e experiência do profissional</p>
                 </div>
                 
-                <div class="calculator-content">
-                    <!-- Calculadora 1 -->
-                    <div class="calculator active" id="pensao-calc">
-                        <h3>Calculadora de Pensão Alimentícia</h3>
-                        <form id="pensaoForm">
+                <div class="sobre-container">
+                    <div class="sobre-img"></div>
+                    
+                    <div class="sobre-text">
+                        <h3>Experiência e Formação Acadêmica</h3>
+                        <p>Dr. Lourival Oliveira é advogado com mais de <strong>10 anos de atuação</strong> em Salvador e região, formado pela <strong>Universidade Salgado de Oliveira</strong> com especialização em <strong>Direito Previdenciário</strong>.</p>
+                        <p>Sua trajetória inclui atuação em diversas áreas do direito, com foco principal em Direito Previdenciário, onde já resolveu mais de <strong>500 casos</strong> com sucesso, alcançando uma taxa de aprovação de <strong>95%</strong>.</p>
+                        <p>Atua com ética, transparência e compromisso com os resultados, sempre buscando a melhor solução jurídica para cada cliente.</p>
+                        
+                        <ul class="sobre-list">
+                            <li><i class="fas fa-check-circle"></i> <strong>10+ anos</strong> de experiência jurídica</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>500+ casos</strong> resolvidos com sucesso</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>95% de taxa</strong> de sucesso em processos</li>
+                            <li><i class="fas fa-check-circle"></i> Especialista em <strong>Direito Previdenciário</strong></li>
+                            <li><i class="fas fa-check-circle"></i> <strong>OAB/BA 61.507</strong> - Ativo e em pleno exercício</li>
+                        </ul>
+                        
+                        <a href="#contato" class="btn" style="margin-top: 20px;">
+                            <i class="fas fa-calendar-alt"></i> Agendar Consulta
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Áreas de Atuação -->
+        <section id="areas" class="areas">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Áreas de Atuação</h2>
+                    <p>Especializações jurídicas com foco em resultados</p>
+                </div>
+                
+                <div class="areas-grid">
+                    <!-- Área 1 - DESTAQUE -->
+                    <div class="area-card fade-in">
+                        <div class="area-image"></div>
+                        <div class="area-content">
+                            <h3><i class="fas fa-hand-holding-usd area-icon"></i> Direito Previdenciário</h3>
+                            <p>Especialista em aposentadorias, pensões por morte, auxílio-doença, benefícios assistenciais (LOAS), revisões de benefícios e planejamento previdenciário.</p>
+                            <ul class="area-list">
+                                <li><i class="fas fa-check"></i> Aposentadorias (tempo de contribuição, idade, especial)</li>
+                                <li><i class="fas fa-check"></i> Pensão por morte e auxílio-reclusão</li>
+                                <li><i class="fas fa-check"></i> Auxílio-doença e auxílio-acidente</li>
+                                <li><i class="fas fa-check"></i> LOAS (Benefício de Prestação Continuada)</li>
+                                <li><i class="fas fa-check"></i> Revisão de benefícios previdenciários</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Área 2 -->
+                    <div class="area-card fade-in">
+                        <div class="area-image"></div>
+                        <div class="area-content">
+                            <h3><i class="fas fa-briefcase area-icon"></i> Direito do Trabalho</h3>
+                            <p>Defesa de direitos trabalhistas, reclamações trabalhistas, rescisões indiretas, horas extras, assédio moral e acidentes de trabalho.</p>
+                            <ul class="area-list">
+                                <li><i class="fas fa-check"></i> Reclamações trabalhistas</li>
+                                <li><i class="fas fa-check"></i> Rescisões e verbas rescisórias</li>
+                                <li><i class="fas fa-check"></i> Horas extras e adicional noturno</li>
+                                <li><i class="fas fa-check"></i> Assédio moral e sexual</li>
+                                <li><i class="fas fa-check"></i> Doenças ocupacionais</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Área 3 -->
+                    <div class="area-card fade-in">
+                        <div class="area-image"></div>
+                        <div class="area-content">
+                            <h3><i class="fas fa-home area-icon"></i> Direito Civil</h3>
+                            <p>Atuação em questões contratuais, responsabilidade civil, indenizações, direito de família, sucessões, inventários e propriedade.</p>
+                            <ul class="area-list">
+                                <li><i class="fas fa-check"></i> Contratos em geral</li>
+                                <li><i class="fas fa-check"></i> Responsabilidade civil</li>
+                                <li><i class="fas fa-check"></i> Direito de família (divórcio, pensão, guarda)</li>
+                                <li><i class="fas fa-check"></i> Inventário e partilha de bens</li>
+                                <li><i class="fas fa-check"></i> Usucapião e direito de propriedade</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Área 4 -->
+                    <div class="area-card fade-in">
+                        <div class="area-image"></div>
+                        <div class="area-content">
+                            <h3><i class="fas fa-shopping-cart area-icon"></i> Direito do Consumidor</h3>
+                            <p>Defesa dos direitos do consumidor em problemas com produtos e serviços, cobranças indevidas, planos de saúde e serviços públicos.</p>
+                            <ul class="area-list">
+                                <li><i class="fas fa-check"></i> Problemas com produtos defeituosos</li>
+                                <li><i class="fas fa-check"></i> Cobranças indevidas e abusivas</li>
+                                <li><i class="fas fa-check"></i> Planos de saúde e operadoras</li>
+                                <li><i class="fas fa-check"></i> Serviços públicos essenciais</li>
+                                <li><i class="fas fa-check"></i> Voos atrasados/cancelados</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Área 5 -->
+                    <div class="area-card fade-in">
+                        <div class="area-image"></div>
+                        <div class="area-content">
+                            <h3><i class="fas fa-user-shield area-icon"></i> Direito Criminal</h3>
+                            <p>Defesa criminal em todas as instâncias, habeas corpus, crimes contra a pessoa e patrimônio, tráfico de drogas e liberdade provisória.</p>
+                            <ul class="area-list">
+                                <li><i class="fas fa-check"></i> Defesa criminal</li>
+                                <li><i class="fas fa-check"></i> Habeas corpus</li>
+                                <li><i class="fas fa-check"></i> Crimes contra a pessoa</li>
+                                <li><i class="fas fa-check"></i> Crimes contra o patrimônio</li>
+                                <li><i class="fas fa-check"></i> Tráfico de drogas e associação</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Área 6 -->
+                    <div class="area-card fade-in">
+                        <div class="area-image"></div>
+                        <div class="area-content">
+                            <h3><i class="fas fa-car area-icon"></i> Direito do Trânsito</h3>
+                            <p>Defesa em processos administrativos e judiciais de trânsito, cassação de CNH, infrações de trânsito e acidentes automobilísticos.</p>
+                            <ul class="area-list">
+                                <li><i class="fas fa-check"></i> Cassação e suspensão de CNH</li>
+                                <li><i class="fas fa-check"></i> Processos administrativos</li>
+                                <li><i class="fas fa-check"></i> Infrações de trânsito</li>
+                                <li><i class="fas fa-check"></i> Acidentes de trânsito</li>
+                                <li><i class="fas fa-check"></i> Recursos e defesas administrativas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Artigos -->
+        <section id="artigos" class="articles">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Artigos Jurídicos</h2>
+                    <p>Conteúdo atualizado sobre direito e jurisprudência</p>
+                </div>
+                
+                <div class="articles-grid">
+                    <!-- Artigo 1 -->
+                    <div class="article-card fade-in">
+                        <div class="article-image"></div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-tag">Previdenciário</span>
+                                <span>15 Jun 2023</span>
+                            </div>
+                            <h3>Nova Reforma da Previdência: O que Mudou para o Trabalhador</h3>
+                            <p>Análise completa sobre as mudanças trazidas pela última reforma previdenciária e como afetam os direitos dos trabalhadores.</p>
+                            <a href="#" class="article-link" onclick="loadArticle('artigo1')">Ler Artigo <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Artigo 2 -->
+                    <div class="article-card fade-in">
+                        <div class="article-image"></div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-tag">Trabalhista</span>
+                                <span>05 Jun 2023</span>
+                            </div>
+                            <h3>Home Office: Direitos e Obrigações do Trabalhador</h3>
+                            <p>Guia completo sobre os direitos trabalhistas no regime de home office após as mudanças trazidas pela reforma trabalhista.</p>
+                            <a href="#" class="article-link" onclick="loadArticle('artigo2')">Ler Artigo <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Artigo 3 -->
+                    <div class="article-card fade-in">
+                        <div class="article-image"></div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-tag">Civil</span>
+                                <span>28 Mai 2023</span>
+                            </div>
+                            <h3>Inventário Extrajudicial: Vantagens e Quando é Possível</h3>
+                            <p>Como o inventário extrajudicial pode ser uma solução mais rápida e econômica para partilha de bens em comparação ao judicial.</p>
+                            <a href="#" class="article-link" onclick="loadArticle('artigo3')">Ler Artigo <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Artigo 4 -->
+                    <div class="article-card fade-in">
+                        <div class="article-image"></div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-tag">Consumidor</span>
+                                <span>20 Mai 2023</span>
+                            </div>
+                            <h3>Direitos do Consumidor em Compras Online</h3>
+                            <p>Seus direitos nas compras pela internet: arrependimento, devolução, prazos de entrega e como agir em caso de problemas.</p>
+                            <a href="#" class="article-link" onclick="loadArticle('artigo4')">Ler Artigo <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: 60px;">
+                    <a href="#" class="btn" onclick="loadAllArticles()">Ver Todos os Artigos <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculadoras Jurídicas -->
+        <section id="calculadoras" class="calculators-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Calculadoras Jurídicas</h2>
+                    <p>Ferramentas úteis para cálculos jurídicos</p>
+                </div>
+                
+                <div class="calculators-container">
+                    <div class="calculator-tabs">
+                        <div class="calculator-tab active" data-calc="pensao">Pensão Alimentícia</div>
+                        <div class="calculator-tab" data-calc="indenizacao">Indenização Trabalhista</div>
+                        <div class="calculator-tab" data-calc="multa">Multa Rescisória</div>
+                    </div>
+                    
+                    <div class="calculator-content">
+                        <!-- Calculadora 1 -->
+                        <div class="calculator active" id="pensao-calc">
+                            <h3>Calculadora de Pensão Alimentícia</h3>
+                            <form id="pensaoForm">
+                                <div class="form-group">
+                                    <label for="renda-alimentante">Renda do Alimentante (R$)</label>
+                                    <input type="number" id="renda-alimentante" class="form-control" placeholder="Ex: 3000" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="num-filhos">Número de Filhos</label>
+                                    <input type="number" id="num-filhos" class="form-control" placeholder="Ex: 2" required min="1">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="necessidades">Necessidades Especiais</label>
+                                    <select id="necessidades" class="form-control">
+                                        <option value="0">Nenhuma</option>
+                                        <option value="1">Saúde/Medicamentos</option>
+                                        <option value="2">Educação Especial</option>
+                                        <option value="3">Ambas</option>
+                                    </select>
+                                </div>
+                                
+                                <button type="submit" class="btn">Calcular Pensão</button>
+                            </form>
+                            
+                            <div class="calculator-result" id="pensaoResult">
+                                <h4>Valor Estimado da Pensão</h4>
+                                <div class="result-value" id="pensaoValue">R$ 0,00</div>
+                                <p><strong>Atenção:</strong> Este cálculo é apenas uma estimativa. O valor final será determinado pelo juiz com base nas necessidades do alimentando e possibilidades do alimentante.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Calculadora 2 -->
+                        <div class="calculator" id="indenizacao-calc">
+                            <h3>Calculadora de Indenização Trabalhista</h3>
+                            <form id="indenizacaoForm">
+                                <div class="form-group">
+                                    <label for="salario">Último Salário (R$)</label>
+                                    <input type="number" id="salario" class="form-control" placeholder="Ex: 2500" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="tempo-servico">Tempo de Serviço (anos)</label>
+                                    <input type="number" id="tempo-servico" class="form-control" placeholder="Ex: 3" step="0.5" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="tipo-rescisao">Tipo de Rescisão</label>
+                                    <select id="tipo-rescisao" class="form-control" required>
+                                        <option value="">Selecione</option>
+                                        <option value="1">Sem justa causa (empregador)</option>
+                                        <option value="2">Pedido de demissão (empregado)</option>
+                                        <option value="3">Com justa causa (empregador)</option>
+                                    </select>
+                                </div>
+                                
+                                <button type="submit" class="btn">Calcular Indenização</button>
+                            </form>
+                            
+                            <div class="calculator-result" id="indenizacaoResult">
+                                <h4>Valor Estimado da Indenização</h4>
+                                <div class="result-value" id="indenizacaoValue">R$ 0,00</div>
+                                <p><strong>Atenção:</strong> Este cálculo é apenas uma estimativa. Outros fatores como férias vencidas, 13º salário proporcional e aviso prévio devem ser considerados no cálculo final.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Calculadora 3 -->
+                        <div class="calculator" id="multa-calc">
+                            <h3>Calculadora de Multa do FGTS</h3>
+                            <form id="multaForm">
+                                <div class="form-group">
+                                    <label for="salario-fgts">Salário Base (R$)</label>
+                                    <input type="number" id="salario-fgts" class="form-control" placeholder="Ex: 2500" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="tempo-fgts">Tempo de Contribuição (anos)</label>
+                                    <input type="number" id="tempo-fgts" class="form-control" placeholder="Ex: 5" step="0.5" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="tipo-demissao">Tipo de Demissão</label>
+                                    <select id="tipo-demissao" class="form-control" required>
+                                        <option value="">Selecione</option>
+                                        <option value="1">Sem justa causa</option>
+                                        <option value="2">Pedido de demissão</option>
+                                        <option value="3">Com justa causa</option>
+                                    </select>
+                                </div>
+                                
+                                <button type="submit" class="btn">Calcular Multa</button>
+                            </form>
+                            
+                            <div class="calculator-result" id="multaResult">
+                                <h4>Valor Estimado da Multa</h4>
+                                <div class="result-value" id="multaValue">R$ 0,00</div>
+                                <p><strong>Atenção:</strong> Este cálculo é apenas uma estimativa da multa do FGTS. Consulte um advogado trabalhista para análise completa do seu caso.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Entre em Contato</h2>
+                    <p>Estamos à disposição para atender suas necessidades jurídicas</p>
+                </div>
+                
+                <div class="contact-container">
+                    <div>
+                        <h3>Informações de Contato</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Escritório em Salvador</h4>
+                                <p>Rua Gonçalves Cezimbra, 17, Apto 102</p>
+                                <p>Pituaçu, Salvador - BA</p>
+                                <p>CEP: 41741-155</p>
+                                <p><strong>OAB/BA:</strong> 61.507</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Telefone & WhatsApp</h4>
+                                <p><strong>(71) 98130-3910</strong></p>
+                                <p>Atendimento por telefone e WhatsApp</p>
+                                <a href="#" class="btn btn-secondary" style="margin-top: 15px; padding: 12px 25px;" id="whatsappContact">
+                                    <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>E-mail</h4>
+                                <p><strong>silva.lourival@gmail.com</strong></p>
+                                <p>Respondemos em até 24 horas úteis</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Horário de Atendimento</h4>
+                                <p><strong>Segunda a Sexta:</strong> 8h às 18h</p>
+                                <p><strong>Sábado:</strong> 9h às 12h (com agendamento)</p>
+                                <p><em>Plantão por telefone para clientes</em></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form fade-in">
+                        <h3>Envie uma Mensagem</h3>
+                        <form id="contactForm">
                             <div class="form-group">
-                                <label for="renda-alimentante">Renda do Alimentante (R$)</label>
-                                <input type="number" id="renda-alimentante" class="form-control" placeholder="Ex: 3000" required>
+                                <label for="contact-nome">Nome Completo</label>
+                                <input type="text" id="contact-nome" class="form-control" required>
                             </div>
                             
                             <div class="form-group">
-                                <label for="num-filhos">Número de Filhos</label>
-                                <input type="number" id="num-filhos" class="form-control" placeholder="Ex: 2" required min="1">
+                                <label for="contact-telefone">Telefone com WhatsApp</label>
+                                <input type="tel" id="contact-telefone" class="form-control" required>
                             </div>
                             
                             <div class="form-group">
-                                <label for="necessidades">Necessidades Especiais</label>
-                                <select id="necessidades" class="form-control">
-                                    <option value="0">Nenhuma</option>
-                                    <option value="1">Saúde/Medicamentos</option>
-                                    <option value="2">Educação Especial</option>
-                                    <option value="3">Ambas</option>
+                                <label for="contact-email">E-mail</label>
+                                <input type="email" id="contact-email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-assunto">Assunto</label>
+                                <select id="contact-assunto" class="form-control" required>
+                                    <option value="">Selecione uma opção</option>
+                                    <option value="previdenciario">Direito Previdenciário</option>
+                                    <option value="trabalhista">Direito do Trabalho</option>
+                                    <option value="civil">Direito Civil</option>
+                                    <option value="consumidor">Direito do Consumidor</option>
+                                    <option value="criminal">Direito Criminal</option>
+                                    <option value="transito">Direito do Trânsito</option>
+                                    <option value="outro">Outro</option>
                                 </select>
                             </div>
                             
-                            <button type="submit" class="btn">Calcular Pensão</button>
+                            <div class="form-group">
+                                <label for="contact-mensagem">Mensagem</label>
+                                <textarea id="contact-mensagem" class="form-control" rows="6" placeholder="Descreva brevemente sua situação" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn" id="submitContactForm">
+                                <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                            </button>
                         </form>
-                        
-                        <div class="calculator-result" id="pensaoResult">
-                            <h4>Valor Estimado da Pensão</h4>
-                            <div class="result-value" id="pensaoValue">R$ 0,00</div>
-                            <p><strong>Atenção:</strong> Este cálculo é apenas uma estimativa. O valor final será determinado pelo juiz com base nas necessidades do alimentando e possibilidades do alimentante.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Calculadora 2 -->
-                    <div class="calculator" id="indenizacao-calc">
-                        <h3>Calculadora de Indenização Trabalhista</h3>
-                        <form id="indenizacaoForm">
-                            <div class="form-group">
-                                <label for="salario">Último Salário (R$)</label>
-                                <input type="number" id="salario" class="form-control" placeholder="Ex: 2500" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="tempo-servico">Tempo de Serviço (anos)</label>
-                                <input type="number" id="tempo-servico" class="form-control" placeholder="Ex: 3" step="0.5" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="tipo-rescisao">Tipo de Rescisão</label>
-                                <select id="tipo-rescisao" class="form-control" required>
-                                    <option value="">Selecione</option>
-                                    <option value="1">Sem justa causa (empregador)</option>
-                                    <option value="2">Pedido de demissão (empregado)</option>
-                                    <option value="3">Com justa causa (empregador)</option>
-                                </select>
-                            </div>
-                            
-                            <button type="submit" class="btn">Calcular Indenização</button>
-                        </form>
-                        
-                        <div class="calculator-result" id="indenizacaoResult">
-                            <h4>Valor Estimado da Indenização</h4>
-                            <div class="result-value" id="indenizacaoValue">R$ 0,00</div>
-                            <p><strong>Atenção:</strong> Este cálculo é apenas uma estimativa. Outros fatores como férias vencidas, 13º salário proporcional e aviso prévio devem ser considerados no cálculo final.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Calculadora 3 -->
-                    <div class="calculator" id="multa-calc">
-                        <h3>Calculadora de Multa do FGTS</h3>
-                        <form id="multaForm">
-                            <div class="form-group">
-                                <label for="salario-fgts">Salário Base (R$)</label>
-                                <input type="number" id="salario-fgts" class="form-control" placeholder="Ex: 2500" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="tempo-fgts">Tempo de Contribuição (anos)</label>
-                                <input type="number" id="tempo-fgts" class="form-control" placeholder="Ex: 5" step="0.5" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="tipo-demissao">Tipo de Demissão</label>
-                                <select id="tipo-demissao" class="form-control" required>
-                                    <option value="">Selecione</option>
-                                    <option value="1">Sem justa causa</option>
-                                    <option value="2">Pedido de demissão</option>
-                                    <option value="3">Com justa causa</option>
-                                </select>
-                            </div>
-                            
-                            <button type="submit" class="btn">Calcular Multa</button>
-                        </form>
-                        
-                        <div class="calculator-result" id="multaResult">
-                            <h4>Valor Estimado da Multa</h4>
-                            <div class="result-value" id="multaValue">R$ 0,00</div>
-                            <p><strong>Atenção:</strong> Este cálculo é apenas uma estimativa da multa do FGTS. Consulte um advogado trabalhista para análise completa do seu caso.</p>
-                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contato -->
-    <section id="contato">
-        <div class="container">
-            <div class="section-header">
-                <h2>Entre em Contato</h2>
-                <p>Estamos à disposição para atender suas necessidades jurídicas</p>
-            </div>
-            
-            <div class="contact-container">
-                <div>
-                    <h3>Informações de Contato</h3>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Escritório em Salvador</h4>
-                            <p>Rua Gonçalves Cezimbra, 17, Apto 102</p>
-                            <p>Pituaçu, Salvador - BA</p>
-                            <p>CEP: 41741-155</p>
-                            <p><strong>OAB/BA:</strong> 61.507</p>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div>
+                        <h3>Dr. Lourival Oliveira</h3>
+                        <p>Advogado com mais de 10 anos de experiência, especializado em Direito Previdenciário com atuação em Salvador e região. Comprometido com a excelência jurídica e resultados satisfatórios para seus clientes.</p>
+                        <p style="margin-top: 15px; color: var(--secondary); font-weight: bold;">OAB/BA 61.507</p>
+                        <div style="margin-top: 25px; display: flex; gap: 20px;">
+                            <a href="#" style="color: white; font-size: 1.4rem;"><i class="fab fa-facebook"></i></a>
+                            <a href="#" style="color: white; font-size: 1.4rem;"><i class="fab fa-instagram"></i></a>
+                            <a href="#" style="color: white; font-size: 1.4rem;"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                     
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Telefone & WhatsApp</h4>
-                            <p><strong>(71) 98130-3910</strong></p>
-                            <p>Atendimento por telefone e WhatsApp</p>
-                            <a href="https://wa.me/5571981303910?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Lourival%20Oliveira" class="btn btn-secondary" style="margin-top: 15px; padding: 12px 25px;" target="_blank">
-                                <i class="fab fa-whatsapp"></i> Falar no WhatsApp
-                            </a>
-                        </div>
+                    <div>
+                        <h3>Links Rápidos</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html#home"><i class="fas fa-chevron-right"></i> Início</a></li>
+                            <li><a href="index.html#sobre"><i class="fas fa-chevron-right"></i> Sobre</a></li>
+                            <li><a href="index.html#areas"><i class="fas fa-chevron-right"></i> Áreas de Atuação</a></li>
+                            <li><a href="index.html#artigos"><i class="fas fa-chevron-right"></i> Artigos</a></li>
+                            <li><a href="index.html#calculadoras"><i class="fas fa-chevron-right"></i> Calculadoras</a></li>
+                            <li><a href="index.html#contato"><i class="fas fa-chevron-right"></i> Contato</a></li>
+                        </ul>
                     </div>
                     
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>E-mail</h4>
-                            <p><strong>silva.lourival@gmail.com</strong></p>
-                            <p>Respondemos em até 24 horas úteis</p>
-                        </div>
+                    <div>
+                        <h3>Áreas de Atuação</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html#areas"><i class="fas fa-chevron-right"></i> Direito Previdenciário</a></li>
+                            <li><a href="index.html#areas"><i class="fas fa-chevron-right"></i> Direito do Trabalho</a></li>
+                            <li><a href="index.html#areas"><i class="fas fa-chevron-right"></i> Direito Civil</a></li>
+                            <li><a href="index.html#areas"><i class="fas fa-chevron-right"></i> Direito do Consumidor</a></li>
+                            <li><a href="index.html#areas"><i class="fas fa-chevron-right"></i> Direito Criminal</a></li>
+                            <li><a href="index.html#areas"><i class="fas fa-chevron-right"></i> Direito do Trânsito</a></li>
+                        </ul>
                     </div>
                     
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Horário de Atendimento</h4>
-                            <p><strong>Segunda a Sexta:</strong> 8h às 18h</p>
-                            <p><strong>Sábado:</strong> 9h às 12h (com agendamento)</p>
-                            <p><em>Plantão por telefone para clientes</em></p>
-                        </div>
+                    <div>
+                        <h3>Contato</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html#contato"><i class="fas fa-map-marker-alt"></i> Rua Gonçalves Cezimbra, 17 - Pituaçu, Salvador - BA</a></li>
+                            <li><a href="tel:5571981303910"><i class="fas fa-phone-alt"></i> (71) 98130-3910</a></li>
+                            <li><a href="https://wa.me/5571981303910"><i class="fab fa-whatsapp"></i> WhatsApp (71) 98130-3910</a></li>
+                            <li><a href="mailto:silva.lourival@gmail.com"><i class="fas fa-envelope"></i> silva.lourival@gmail.com</a></li>
+                        </ul>
                     </div>
                 </div>
                 
-                <div class="contact-form fade-in">
-                    <h3>Envie uma Mensagem</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="contact-nome">Nome Completo</label>
-                            <input type="text" id="contact-nome" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="contact-telefone">Telefone com WhatsApp</label>
-                            <input type="tel" id="contact-telefone" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="contact-email">E-mail</label>
-                            <input type="email" id="contact-email" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="contact-assunto">Assunto</label>
-                            <select id="contact-assunto" class="form-control" required>
-                                <option value="">Selecione uma opção</option>
-                                <option value="previdenciario">Direito Previdenciário</option>
-                                <option value="trabalhista">Direito do Trabalho</option>
-                                <option value="civil">Direito Civil</option>
-                                <option value="consumidor">Direito do Consumidor</option>
-                                <option value="criminal">Direito Criminal</option>
-                                <option value="transito">Direito do Trânsito</option>
-                                <option value="outro">Outro</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="contact-mensagem">Mensagem</label>
-                            <textarea id="contact-mensagem" class="form-control" rows="6" placeholder="Descreva brevemente sua situação" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn">
-                            <i class="fas fa-paper-plane"></i> Enviar Mensagem
-                        </button>
-                    </form>
+                <div class="copyright">
+                    <p>&copy; 2023 Dr. Lourival Oliveira - Advogado. Todos os direitos reservados. OAB/BA 61.507</p>
+                    <p style="margin-top: 15px;">Desenvolvido com excelência para atender suas necessidades jurídicas em Salvador e região.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div>
-                    <h3>Dr. Lourival Oliveira</h3>
-                    <p>Advogado com mais de 10 anos de experiência, especializado em Direito Previdenciário com atuação em Salvador e região. Comprometido com a excelência jurídica e resultados satisfatórios para seus clientes.</p>
-                    <p style="margin-top: 15px; color: var(--secondary); font-weight: bold;">OAB/BA 61.507</p>
-                    <div style="margin-top: 25px; display: flex; gap: 20px;">
-                        <a href="#" style="color: white; font-size: 1.4rem;"><i class="fab fa-facebook"></i></a>
-                        <a href="#" style="color: white; font-size: 1.4rem;"><i class="fab fa-instagram"></i></a>
-                        <a href="#" style="color: white; font-size: 1.4rem;"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3>Links Rápidos</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Início</a></li>
-                        <li><a href="#sobre"><i class="fas fa-chevron-right"></i> Sobre</a></li>
-                        <li><a href="#areas"><i class="fas fa-chevron-right"></i> Áreas de Atuação</a></li>
-                        <li><a href="#artigos"><i class="fas fa-chevron-right"></i> Artigos</a></li>
-                        <li><a href="#calculadoras"><i class="fas fa-chevron-right"></i> Calculadoras</a></li>
-                        <li><a href="#contato"><i class="fas fa-chevron-right"></i> Contato</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3>Áreas de Atuação</h3>
-                    <ul class="footer-links">
-                        <li><a href="#areas"><i class="fas fa-chevron-right"></i> Direito Previdenciário</a></li>
-                        <li><a href="#areas"><i class="fas fa-chevron-right"></i> Direito do Trabalho</a></li>
-                        <li><a href="#areas"><i class="fas fa-chevron-right"></i> Direito Civil</a></li>
-                        <li><a href="#areas"><i class="fas fa-chevron-right"></i> Direito do Consumidor</a></li>
-                        <li><a href="#areas"><i class="fas fa-chevron-right"></i> Direito Criminal</a></li>
-                        <li><a href="#areas"><i class="fas fa-chevron-right"></i> Direito do Trânsito</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3>Contato</h3>
-                    <ul class="footer-links">
-                        <li><a href="#contato"><i class="fas fa-map-marker-alt"></i> Rua Gonçalves Cezimbra, 17 - Pituaçu, Salvador - BA</a></li>
-                        <li><a href="tel:5571981303910"><i class="fas fa-phone-alt"></i> (71) 98130-3910</a></li>
-                        <li><a href="https://wa.me/5571981303910"><i class="fab fa-whatsapp"></i> WhatsApp (71) 98130-3910</a></li>
-                        <li><a href="mailto:silva.lourival@gmail.com"><i class="fas fa-envelope"></i> silva.lourival@gmail.com</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; 2023 Dr. Lourival Oliveira - Advogado. Todos os direitos reservados. OAB/BA 61.507</p>
-                <p style="margin-top: 15px;">Desenvolvido com excelência para atender suas necessidades jurídicas em Salvador e região.</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/5571981303910?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Lourival%20Oliveira" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5571981303910" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -2443,14 +2580,30 @@
             document.getElementById('multaResult').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         });
         
-        // Form submission
+        // Form submission - Envio via WhatsApp
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Simulação de envio
             const nome = document.getElementById('contact-nome').value;
-            alert(`Obrigado, ${nome}! Sua mensagem foi enviada com sucesso! Entraremos em contato em breve.`);
+            const telefone = document.getElementById('contact-telefone').value;
+            const email = document.getElementById('contact-email').value;
+            const assunto = document.getElementById('contact-assunto').value;
+            const mensagem = document.getElementById('contact-mensagem').value;
+            
+            // Formatar a mensagem para o WhatsApp
+            const texto = `Olá, Dr. Lourival Oliveira! Gostaria de agendar uma consulta.%0A%0A*Nome:* ${nome}%0A*Telefone:* ${telefone}%0A*E-mail:* ${email}%0A*Assunto:* ${assunto}%0A*Mensagem:* ${mensagem}`;
+            
+            // Abrir WhatsApp com a mensagem pré-preenchida
+            window.open(`https://wa.me/5571981303910?text=${texto}`, '_blank');
+            
+            // Limpar formulário
             this.reset();
+        });
+        
+        // Botão de WhatsApp direto
+        document.getElementById('whatsappContact').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.open('https://wa.me/5571981303910?text=Olá,%20Dr.%20Lourival%20Oliveira!%20Gostaria%20de%20agendar%20uma%20consulta.', '_blank');
         });
         
         // Smooth scroll for anchor links
@@ -2473,6 +2626,513 @@
         
         // Initialize fade elements
         checkFade();
+        
+        // Funções para carregar artigos
+        function loadArticle(articleId) {
+            const mainContent = document.getElementById('main-content');
+            const articleContent = document.getElementById('article-content');
+            
+            // Esconder conteúdo principal
+            mainContent.style.display = 'none';
+            
+            // Mostrar conteúdo do artigo
+            articleContent.style.display = 'block';
+            
+            // Carregar o artigo específico
+            let articleHTML = '';
+            
+            if (articleId === 'artigo1') {
+                articleHTML = `
+                    <section class="article-page">
+                        <div class="article-header">
+                            <div class="container">
+                                <div class="article-meta">
+                                    <span class="article-tag">Previdenciário</span>
+                                    <span>15 Jun 2023</span>
+                                </div>
+                                <h1>Nova Reforma da Previdência: O que Mudou para o Trabalhador</h1>
+                                <p class="article-author">
+                                    <i class="fas fa-user-tie"></i> Por Dr. Lourival Oliveira
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="container">
+                            <img src="https://images.unsplash.com/photo-1589216532372-1c2a367900d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80" alt="Reforma da Previdência" class="article-image-page">
+                            
+                            <div class="article-content-page">
+                                <p>A reforma da previdência de 2023 trouxe mudanças significativas que afetam diretamente os direitos dos trabalhadores brasileiros. Neste artigo, analisaremos detalhadamente as principais alterações e seus impactos.</p>
+                                
+                                <h2>Contexto Histórico da Reforma</h2>
+                                <p>A necessidade de reformar o sistema previdenciário brasileiro vem sendo discutida há décadas. O envelhecimento da população, o aumento da expectativa de vida e a redução da taxa de natalidade criaram um desequilíbrio financeiro no sistema.</p>
+                                
+                                <h2>Principais Mudanças</h2>
+                                
+                                <h3>1. Idade Mínima</h3>
+                                <p>A nova reforma estabelece idade mínima de 65 anos para homens e 62 anos para mulheres, com pelo menos 15 anos de contribuição. Esta é uma das mudanças mais significativas.</p>
+                                
+                                <h3>2. Tempo de Contribuição</h3>
+                                <p>O tempo mínimo de contribuição passa a ser de 20 anos para ter direito à aposentadoria integral. Para os professores, há regras diferenciadas.</p>
+                                
+                                <h3>3. Cálculo do Benefício</h3>
+                                <p>O cálculo do benefício agora considera a média de todas as contribuições, e não apenas as 80% maiores, como era anteriormente.</p>
+                                
+                                <div class="article-quote">
+                                    "A reforma da previdência é necessária para garantir a sustentabilidade do sistema, mas deve ser implementada com cuidado para não prejudicar os trabalhadores que já contribuíram por décadas."
+                                </div>
+                                
+                                <h2>Impactos para Diferentes Categorias</h2>
+                                
+                                <h3>Trabalhadores Urbanos</h3>
+                                <p>Os trabalhadores urbanos serão os mais afetados pelas novas regras de idade mínima e tempo de contribuição.</p>
+                                
+                                <h3>Trabalhadores Rurais</h3>
+                                <p>Para os trabalhadores rurais, a reforma mantém algumas regras diferenciadas, mas também impõe novas exigências.</p>
+                                
+                                <h3>Servidores Públicos</h3>
+                                <p>Os servidores públicos terão regras ainda mais rigorosas, com idade mínima de 65 anos para ambos os sexos e tempo de contribuição de 25 anos.</p>
+                                
+                                <h2>Estratégias para se Preparar</h2>
+                                <p>Diante das novas regras, é fundamental que os trabalhadores se preparem adequadamente:</p>
+                                
+                                <ul class="article-list">
+                                    <li>Planeje sua aposentadoria com antecedência</li>
+                                    <li>Mantenha as contribuições em dia</li>
+                                    <li>Consulte um advogado previdenciário</li>
+                                    <li>Considere planos de previdência complementar</li>
+                                    <li>Esteja atento às regras de transição</li>
+                                </ul>
+                                
+                                <h2>Regras de Transição</h2>
+                                <p>A reforma prevê regras de transição para quem já estava próximo de se aposentar. É fundamental entender se você se enquadra em alguma dessas regras.</p>
+                                
+                                <h3>Sistema de Pontos</h3>
+                                <p>Uma das regras de transição mais importantes é o sistema de pontos, que soma idade e tempo de contribuição.</p>
+                                
+                                <h3>Pedágio de 50%</h3>
+                                <p>Outra opção é o pedágio de 50% sobre o tempo que faltava para se aposentar quando a reforma foi aprovada.</p>
+                                
+                                <h2>Conclusão</h2>
+                                <p>A nova reforma da previdência traz mudanças profundas que exigem planejamento e orientação especializada. É fundamental que cada trabalhador entenda como as novas regras afetam sua situação específica e busque orientação jurídica para tomar as melhores decisões.</p>
+                                
+                                <p>Como advogado previdenciário com mais de 10 anos de experiência, posso afirmar que a chave para uma aposentadoria tranquila está no planejamento antecipado e na compreensão detalhada da legislação.</p>
+                                
+                                <a href="#" class="back-to-articles" onclick="backToHome()">
+                                    <i class="fas fa-arrow-left"></i> Voltar para Artigos
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                `;
+            } else if (articleId === 'artigo2') {
+                articleHTML = `
+                    <section class="article-page">
+                        <div class="article-header">
+                            <div class="container">
+                                <div class="article-meta">
+                                    <span class="article-tag">Trabalhista</span>
+                                    <span>05 Jun 2023</span>
+                                </div>
+                                <h1>Home Office: Direitos e Obrigações do Trabalhador</h1>
+                                <p class="article-author">
+                                    <i class="fas fa-user-tie"></i> Por Dr. Lourival Oliveira
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="container">
+                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2022&q=80" alt="Home Office" class="article-image-page">
+                            
+                            <div class="article-content-page">
+                                <p>O trabalho remoto, ou home office, tornou-se realidade para milhões de trabalhadores brasileiros. Neste artigo, exploraremos os direitos e obrigações dos profissionais que atuam nessa modalidade.</p>
+                                
+                                <h2>Definição Legal do Home Office</h2>
+                                <p>Segundo a legislação trabalhista brasileira, o teletrabalho é caracterizado pela prestação de serviços predominantemente fora das dependências do empregador, com a utilização de tecnologias de informação e comunicação.</p>
+                                
+                                <h2>Direitos do Trabalhador em Home Office</h2>
+                                
+                                <h3>1. Remuneração</h3>
+                                <p>O trabalhador em home office tem direito aos mesmos salários e benefícios dos colegas que atuam presencialmente.</p>
+                                
+                                <h3>2. Horas Extras</h3>
+                                <p>As horas extras devem ser remuneradas, mesmo no regime de home office. É fundamental manter registro preciso da jornada.</p>
+                                
+                                <h3>3. Segurança do Trabalho</h3>
+                                <p>O empregador é responsável por fornecer equipamentos adequados e orientar sobre ergonomia e segurança no ambiente de trabalho remoto.</p>
+                                
+                                <div class="article-quote">
+                                    "O home office não pode ser pretexto para a redução de direitos trabalhistas. O trabalhador remoto tem os mesmos direitos que o presencial."
+                                </div>
+                                
+                                <h2>Obrigações do Trabalhador</h2>
+                                
+                                <h3>1. Produtividade</h3>
+                                <p>O trabalhador deve manter os mesmos níveis de produtividade exigidos no regime presencial.</p>
+                                
+                                <h3>2. Comunicação</h3>
+                                <p>É obrigação do funcionário manter comunicação constante com a empresa e colegas de trabalho.</p>
+                                
+                                <h3>3. Sigilo</h3>
+                                <p>O trabalhador deve manter a confidencialidade das informações da empresa, mesmo atuando de casa.</p>
+                                
+                                <h2>Desafios do Home Office</h2>
+                                <p>O trabalho remoto apresenta desafios específicos que precisam ser considerados:</p>
+                                
+                                <ul class="article-list">
+                                    <li>Dificuldade de separação entre vida pessoal e profissional</li>
+                                    <li>Riscos de isolamento social</li>
+                                    <li>Problemas de saúde relacionados à ergonomia</li>
+                                    <li>Dificuldades de comunicação com a equipe</li>
+                                    <li>Questões de segurança da informação</li>
+                                </ul>
+                                
+                                <h2>Aspectos Jurídicos Importantes</h2>
+                                
+                                <h3>Contrato de Trabalho</h3>
+                                <p>O regime de home office deve estar claramente especificado no contrato de trabalho, com todas as condições acordadas.</p>
+                                
+                                <h3>Acidente de Trabalho</h3>
+                                <p>Acidentes ocorridos durante o horário de trabalho em home office podem ser considerados acidentes de trabalho.</p>
+                                
+                                <h3>Direito à Desconexão</h3>
+                                <p>O trabalhador tem direito ao descanso e não pode ser obrigado a responder mensagens fora do horário de trabalho.</p>
+                                
+                                <h2>Conclusão</h2>
+                                <p>O home office veio para ficar, mas é fundamental que tanto empregadores quanto empregados entendam seus direitos e obrigações. A chave para uma relação saudável no trabalho remoto está no equilíbrio entre flexibilidade e respeito à legislação trabalhista.</p>
+                                
+                                <p>Como advogado trabalhista, recomendo que todos os trabalhadores em regime de home office mantenham registro detalhado de sua jornada e busquem orientação jurídica sempre que tiverem dúvidas sobre seus direitos.</p>
+                                
+                                <a href="#" class="back-to-articles" onclick="backToHome()">
+                                    <i class="fas fa-arrow-left"></i> Voltar para Artigos
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                `;
+            } else if (articleId === 'artigo3') {
+                articleHTML = `
+                    <section class="article-page">
+                        <div class="article-header">
+                            <div class="container">
+                                <div class="article-meta">
+                                    <span class="article-tag">Civil</span>
+                                    <span>28 Mai 2023</span>
+                                </div>
+                                <h1>Inventário Extrajudicial: Vantagens e Quando é Possível</h1>
+                                <p class="article-author">
+                                    <i class="fas fa-user-tie"></i> Por Dr. Lourival Oliveira
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="container">
+                            <img src="https://images.unsplash.com/photo-1589578527966-fdac0f44566c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Inventário" class="article-image-page">
+                            
+                            <div class="article-content-page">
+                                <p>O inventário extrajudicial é uma alternativa mais ágil e econômica ao inventário judicial tradicional. Neste artigo, explicaremos quando é possível optar por essa modalidade e suas principais vantagens.</p>
+                                
+                                <h2>O que é Inventário Extrajudicial?</h2>
+                                <p>O inventário extrajudicial é um procedimento realizado em cartório, sem necessidade de ação judicial, para partilha de bens deixados por uma pessoa falecida.</p>
+                                
+                                <h2>Requisitos para o Inventário Extrajudicial</h2>
+                                
+                                <h3>1. Concordância entre os Herdeiros</h3>
+                                <p>Todos os herdeiros maiores e capazes devem estar de acordo com a partilha proposta.</p>
+                                
+                                <h3>2. Ausência de Testamento Controverso</h3>
+                                <p>Não pode haver testamento ou se houver, não pode haver controvérsia sobre sua validade.</p>
+                                
+                                <h3>3. Capacidade dos Herdeiros</h3>
+                                <p>Todos os herdeiros devem ser maiores de 18 anos e capazes civilmente.</p>
+                                
+                                <div class="article-quote">
+                                    "O inventário extrajudicial pode reduzir o tempo de partilha de bens de anos para meses, proporcionando maior agilidade e redução de custos para os herdeiros."
+                                </div>
+                                
+                                <h2>Vantagens do Inventário Extrajudicial</h2>
+                                
+                                <h3>1. Agilidade</h3>
+                                <p>Enquanto um inventário judicial pode levar anos, o extrajudicial normalmente é concluído em poucos meses.</p>
+                                
+                                <h3>2. Redução de Custos</h3>
+                                <p>Os custos com honorários advocatícios e emolumentos cartorários são significativamente menores.</p>
+                                
+                                <h3>3. Menor Desgaste Emocional</h3>
+                                <p>Evita o estresse de um processo judicial prolongado em um momento já delicado para a família.</p>
+                                
+                                <h2>Passo a Passo do Inventário Extrajudicial</h2>
+                                <p>O processo de inventário extrajudicial segue as seguintes etapas:</p>
+                                
+                                <ul class="article-list">
+                                    <li>Reunião com advogado para análise do caso</li>
+                                    <li>Coleta de documentação necessária</li>
+                                    <li>Elaboração da proposta de partilha</li>
+                                    <li>Assinatura do acordo por todos os herdeiros</li>
+                                    <li>Registro do inventário em cartório</li>
+                                    <li>Transferência dos bens aos herdeiros</li>
+                                </ul>
+                                
+                                <h2>Documentação Necessária</h2>
+                                
+                                <h3>Documentos Pessoais</h3>
+                                <p>CPF, RG e certidão de nascimento ou casamento de todos os herdeiros.</p>
+                                
+                                <h3>Documentos do Falecido</h3>
+                                <p>Certidão de óbito, documentos pessoais e comprovantes de propriedade dos bens.</p>
+                                
+                                <h3>Documentos dos Bens</h3>
+                                <p>Registros de imóveis, veículos, contas bancárias e outros bens a serem partilhados.</p>
+                                
+                                <h2>Quando Não é Possível o Inventário Extrajudicial</h2>
+                                
+                                <h3>Herdeiros Menores ou Incapazes</h3>
+                                <p>A presença de herdeiros menores ou incapazes exige a intervenção do juiz.</p>
+                                
+                                <h3>Discordância entre Herdeiros</h3>
+                                <p>Se não houver consenso sobre a partilha, o inventário judicial é necessário.</p>
+                                
+                                <h3>Bens em Outros Países</h3>
+                                <p>Bens localizados no exterior podem exigir procedimentos específicos.</p>
+                                
+                                <h2>Conclusão</h2>
+                                <p>O inventário extrajudicial é uma excelente alternativa quando há acordo entre os herdeiros. Sua agilidade e menor custo o tornam a opção preferencial na maioria dos casos.</p>
+                                
+                                <p>Como advogado especializado em direito civil e sucessões, recomendo que as famílias busquem orientação profissional logo após o falecimento para avaliar a melhor opção para seu caso específico.</p>
+                                
+                                <a href="#" class="back-to-articles" onclick="backToHome()">
+                                    <i class="fas fa-arrow-left"></i> Voltar para Artigos
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                `;
+            } else if (articleId === 'artigo4') {
+                articleHTML = `
+                    <section class="article-page">
+                        <div class="article-header">
+                            <div class="container">
+                                <div class="article-meta">
+                                    <span class="article-tag">Consumidor</span>
+                                    <span>20 Mai 2023</span>
+                                </div>
+                                <h1>Direitos do Consumidor em Compras Online</h1>
+                                <p class="article-author">
+                                    <i class="fas fa-user-tie"></i> Por Dr. Lourival Oliveira
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="container">
+                            <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2076&q=80" alt="Compras Online" class="article-image-page">
+                            
+                            <div class="article-content-page">
+                                <p>As compras online revolucionaram o comércio, mas também criaram novos desafios para os consumidores. Neste artigo, abordaremos os principais direitos do consumidor nas compras pela internet.</p>
+                                
+                                <h2>O Marco Legal do Comércio Eletrônico</h2>
+                                <p>O Código de Defesa do Consumidor (CDC) e o Marco Civil da Internet são as principais leis que regulamentam as compras online no Brasil.</p>
+                                
+                                <h2>Direito ao Arrependimento</h2>
+                                
+                                <h3>Prazo de 7 Dias</h3>
+                                <p>O consumidor tem direito a se arrepender da compra em até 7 dias corridos, sem necessidade de justificativa.</p>
+                                
+                                <h3>Devolução do Valor</h3>
+                                <p>O valor pago deve ser devolvido integralmente, incluindo frete, em até 30 dias.</p>
+                                
+                                <h3>Produtos Isentos</h3>
+                                <p>Produtos personalizados ou sob medida não estão sujeitos ao direito de arrependimento.</p>
+                                
+                                <div class="article-quote">
+                                    "O direito ao arrependimento é uma das principais conquistas do consumidor no comércio eletrônico, garantindo maior segurança nas compras online."
+                                </div>
+                                
+                                <h2>Informações Obrigatórias</h2>
+                                
+                                <h3>Identificação do Fornecedor</h3>
+                                <p>O site deve conter informações completas sobre a empresa, incluindo CNPJ, endereço e telefone.</p>
+                                
+                                <h3>Descrição do Produto</h3>
+                                <p>As características do produto devem ser descritas com precisão, incluindo fotos reais.</p>
+                                
+                                <h3>Preços e Condições</h3>
+                                <p>Todos os custos devem ser informados claramente, sem cobranças escondidas.</p>
+                                
+                                <h2>Problemas Comuns e Soluções</h2>
+                                <p>As compras online podem apresentar diversos problemas:</p>
+                                
+                                <ul class="article-list">
+                                    <li>Atraso na entrega</li>
+                                    <li>Produto diferente do anunciado</li>
+                                    <li>Produto com defeito</li>
+                                    <li>Dificuldade para devolução</li>
+                                    <li>Cobranças indevidas</li>
+                                </ul>
+                                
+                                <h2>Garantias e Prazos</h2>
+                                
+                                <h3>Garantia Legal</h3>
+                                <p>Todo produto tem garantia legal de 90 dias para bens duráveis e 30 dias para não duráveis.</p>
+                                
+                                <h3>Garantia Contratual</h3>
+                                <p>Além da garantia legal, o fornecedor pode oferecer garantia contratual adicional.</p>
+                                
+                                <h3>Prazos de Entrega</h3>
+                                <p>O prazo de entrega deve ser informado no momento da compra e cumprido rigorosamente.</p>
+                                
+                                <h2>Como Reclamar</h2>
+                                
+                                <h3>Primeiro Passo: Reclamação Direta</h3>
+                                <p>Tente resolver diretamente com o fornecedor, preferencialmente por escrito.</p>
+                                
+                                <h3>Segundo Passo: Procon</h3>
+                                <p>Se não resolver, faça uma reclamação no Procon ou nos canais de atendimento do consumidor.</p>
+                                
+                                <h3>Terceiro Passo: Ação Judicial</h3>
+                                <p>Como último recurso, busque a via judicial com assistência de advogado.</p>
+                                
+                                <h2>Conclusão</h2>
+                                <p>As compras online oferecem praticidade, mas exigem que o consumidor conheça seus direitos. A chave para uma boa experiência de compra está na escolha de fornecedores confiáveis e no conhecimento da legislação consumerista.</p>
+                                
+                                <p>Como advogado especializado em direito do consumidor, recomendo que todos mantenham registro de suas compras online e não hesitem em exercer seus direitos quando necessário.</p>
+                                
+                                <a href="#" class="back-to-articles" onclick="backToHome()">
+                                    <i class="fas fa-arrow-left"></i> Voltar para Artigos
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                `;
+            }
+            
+            articleContent.innerHTML = articleHTML;
+            
+            // Rolar para o topo
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        function loadAllArticles() {
+            // Carregar uma página com todos os artigos em resumo
+            const mainContent = document.getElementById('main-content');
+            const articleContent = document.getElementById('article-content');
+            
+            // Esconder conteúdo principal
+            mainContent.style.display = 'none';
+            
+            // Mostrar conteúdo dos artigos
+            articleContent.style.display = 'block';
+            
+            articleContent.innerHTML = `
+                <section class="article-page">
+                    <div class="article-header">
+                        <div class="container">
+                            <h1>Todos os Artigos Jurídicos</h1>
+                            <p class="article-author">
+                                <i class="fas fa-user-tie"></i> Por Dr. Lourival Oliveira
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="container">
+                        <div class="articles-grid" style="margin-top: 60px;">
+                            <div class="article-card">
+                                <div class="article-image"></div>
+                                <div class="article-content">
+                                    <div class="article-meta">
+                                        <span class="article-tag">Previdenciário</span>
+                                        <span>15 Jun 2023</span>
+                                    </div>
+                                    <h3>Nova Reforma da Previdência: O que Mudou para o Trabalhador</h3>
+                                    <p>Análise completa sobre as mudanças trazidas pela última reforma previdenciária e como afetam os direitos dos trabalhadores.</p>
+                                    <a href="#" class="article-link" onclick="loadArticle('artigo1')">Ler Artigo Completo <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            
+                            <div class="article-card">
+                                <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2022&q=80');"></div>
+                                <div class="article-content">
+                                    <div class="article-meta">
+                                        <span class="article-tag">Trabalhista</span>
+                                        <span>05 Jun 2023</span>
+                                    </div>
+                                    <h3>Home Office: Direitos e Obrigações do Trabalhador</h3>
+                                    <p>Guia completo sobre os direitos trabalhistas no regime de home office após as mudanças trazidas pela reforma trabalhista.</p>
+                                    <a href="#" class="article-link" onclick="loadArticle('artigo2')">Ler Artigo Completo <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            
+                            <div class="article-card">
+                                <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1589578527966-fdac0f44566c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                                <div class="article-content">
+                                    <div class="article-meta">
+                                        <span class="article-tag">Civil</span>
+                                        <span>28 Mai 2023</span>
+                                    </div>
+                                    <h3>Inventário Extrajudicial: Vantagens e Quando é Possível</h3>
+                                    <p>Como o inventário extrajudicial pode ser uma solução mais rápida e econômica para partilha de bens em comparação ao judicial.</p>
+                                    <a href="#" class="article-link" onclick="loadArticle('artigo3')">Ler Artigo Completo <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            
+                            <div class="article-card">
+                                <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2076&q=80');"></div>
+                                <div class="article-content">
+                                    <div class="article-meta">
+                                        <span class="article-tag">Consumidor</span>
+                                        <span>20 Mai 2023</span>
+                                    </div>
+                                    <h3>Direitos do Consumidor em Compras Online</h3>
+                                    <p>Seus direitos nas compras pela internet: arrependimento, devolução, prazos de entrega e como agir em caso de problemas.</p>
+                                    <a href="#" class="article-link" onclick="loadArticle('artigo4')">Ler Artigo Completo <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center" style="margin-top: 60px;">
+                            <a href="#" class="back-to-articles" onclick="backToHome()">
+                                <i class="fas fa-arrow-left"></i> Voltar para Página Inicial
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            `;
+            
+            // Rolar para o topo
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        function backToHome() {
+            const mainContent = document.getElementById('main-content');
+            const articleContent = document.getElementById('article-content');
+            
+            // Mostrar conteúdo principal
+            mainContent.style.display = 'block';
+            
+            // Esconder conteúdo do artigo
+            articleContent.style.display = 'none';
+            articleContent.innerHTML = '';
+            
+            // Rolar para o topo
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Verificar se há parâmetro de artigo na URL
+        window.addEventListener('load', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const articleParam = urlParams.get('article');
+            
+            if (articleParam) {
+                loadArticle(articleParam);
+            }
+        });
     </script>
 </body>
 </html>
