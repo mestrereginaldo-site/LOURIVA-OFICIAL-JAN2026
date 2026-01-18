@@ -554,8 +554,8 @@
             overflow: hidden;
             box-shadow: var(--shadow-lg);
             height: 550px;
-            /* FOTO DE ESCRITÓRIO SÉRIO DE ADVOGADO substituída conforme solicitado */
-            background-image: url('https://images.unsplash.com/photo-1589391886085-8b6b0ac72a1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            /* FOTO DE ESCRITÓRIO SÉRIO DE ADVOGADO substituída conforme solicitado - IMAGEM CORRIGIDA */
+            background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             position: relative;
@@ -720,7 +720,7 @@
         }
         
         .article-card:nth-child(4) .article-image {
-            /* CORREÇÃO: Imagem adicionada para o artigo "Direito de Arrependimento e Compras Online" */
+            /* CORREÇÃO: Imagem adicionada para o artigo "Direito de Arrependimento e Compras Online" - IMAGEM CORRIGIDA */
             background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
         }
 
@@ -849,7 +849,7 @@
             font-weight: bold;
         }
 
-        /* Calculators */
+        /* Calculators - ATUALIZADO: Nova aba para Benefício Previdenciário */
         .calculator-section {
             background-color: var(--light-bg);
         }
@@ -864,6 +864,7 @@
             justify-content: center;
             margin-bottom: 40px;
             gap: 15px;
+            flex-wrap: wrap;
         }
 
         .calculator-tab {
@@ -1095,7 +1096,13 @@
             animation: fadeInUp 0.8s ease forwards;
         }
 
-        /* Responsive - CORREÇÃO: Adicionada responsividade para a seção Sobre */
+        /* Responsive - CORREÇÃO COMPLETA: Responsividade melhorada */
+        @media (max-width: 1200px) {
+            .banner-slide {
+                padding: 0 60px;
+            }
+        }
+
         @media (max-width: 992px) {
             h1 { font-size: 3rem; }
             h2 { font-size: 2.5rem; }
@@ -1130,48 +1137,93 @@
             }
             .nav-overlay.active { opacity: 1; visibility: visible; }
             .banner-slides { height: 600px; }
+            .banner-slide { padding: 0 40px; }
             .features-grid { grid-template-columns: repeat(2, 1fr); }
             .areas-grid { grid-template-columns: repeat(2, 1fr); }
             .contact-grid { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
-            /* CORREÇÃO: Sobre responsivo */
+            /* CORREÇÃO: Sobre responsivo melhorado */
             .sobre-container {
                 grid-template-columns: 1fr;
                 gap: 50px;
             }
             .sobre-img {
                 height: 400px;
-                order: -1; /* Coloca a imagem acima do texto em dispositivos móveis */
+                order: -1;
+                max-width: 100%;
+            }
+            .calculator-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            .calculator-tab {
+                width: 100%;
+                max-width: 320px;
             }
         }
 
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
             .banner-slides { height: 550px; }
-            .banner-slide { padding: 0 40px; }
+            .banner-slide { padding: 0 30px; }
             .slide-content h1 { font-size: 2.5rem; }
             .slide-content p { font-size: 1.1rem; }
             .banner-prev, .banner-next { width: 50px; height: 50px; font-size: 1.2rem; }
             .banner-prev { left: 20px; }
             .banner-next { right: 20px; }
-            .areas-grid, .articles-grid { grid-template-columns: 1fr; }
-            .calculator-tabs { flex-direction: column; align-items: center; }
-            .calculator-tab { width: 100%; max-width: 320px; }
-            .features-grid { grid-template-columns: 1fr; }
+            .areas-grid, .articles-grid, .features-grid { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; }
+            .contact-form {
+                padding: 30px;
+            }
+            .calculator-content {
+                padding: 30px;
+            }
             /* CORREÇÃO: Ajuste adicional para a imagem do sobre em telas menores */
             .sobre-img {
                 height: 350px;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .cta-buttons .btn {
+                width: 100%;
+                max-width: 300px;
             }
         }
 
         @media (max-width: 480px) {
             .sobre-img {
-                height: 300px;
+                height: 280px;
             }
             .credenciais-grid {
                 grid-template-columns: 1fr !important;
                 gap: 15px !important;
+            }
+            .banner-slides {
+                height: 500px;
+            }
+            .banner-slide {
+                padding: 0 20px;
+            }
+            .slide-content h1 {
+                font-size: 2rem;
+            }
+            .slide-content p {
+                font-size: 1rem;
+            }
+            .section-header p {
+                font-size: 1rem;
+            }
+            .contact-item {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .contact-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -1237,9 +1289,12 @@
                     </div>
                     <div class="banner-slide">
                         <div class="slide-content">
-                            <h1>Resultados que Fazem a Diferença</h1>
-                            <p>95% de taxa de sucesso em processos. Atuação estratégica focada em alcançar os melhores resultados para nossos clientes.</p>
-                            <a href="#areas" class="btn btn-secondary">Conheça Nossas Áreas</a>
+                            <h1>Resultados Jurídicos Completos</h1>
+                            <p>95% de taxa de sucesso em processos. Atuação em Direito Civil, Família e Consumidor. Segurança jurídica para você e seu patrimônio.</p>
+                            <div class="cta-buttons">
+                                <a href="#sobre" class="btn">Saiba Mais</a>
+                                <a href="#areas" class="btn btn-outline" style="color: white; border-color: white;">Conheça Nossas Áreas</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1445,12 +1500,49 @@
                 
                 <div class="calculator-container">
                     <div class="calculator-tabs">
-                        <button class="calculator-tab active" data-target="pensao-calc">Pensão Alimentícia</button>
+                        <button class="calculator-tab active" data-target="beneficio-calc">Benefício Previdenciário</button>
+                        <button class="calculator-tab" data-target="pensao-calc">Pensão Alimentícia</button>
                         <button class="calculator-tab" data-target="indenizacao-calc">Rescisão Trabalhista</button>
                     </div>
                     
                     <div class="calculator-content">
-                        <div class="calculator active" id="pensao-calc">
+                        <div class="calculator active" id="beneficio-calc">
+                            <h3>Estimativa de Benefício Previdenciário</h3>
+                            <p style="font-size: 0.9rem; margin-bottom: 25px;">Esta é uma estimativa baseada nas regras atuais do INSS. O valor final pode variar conforme análise do órgão previdenciário.</p>
+                            <form id="beneficioForm">
+                                <div class="form-group">
+                                    <label for="media-salarios">Média dos 80% maiores salários (R$)</label>
+                                    <input type="number" id="media-salarios" class="form-control" placeholder="Ex: 3000" required>
+                                    <small style="color: var(--gray); font-size: 0.85rem;">Digite a média dos seus 80% maiores salários de contribuição</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tempo-contribuicao">Tempo de Contribuição (anos)</label>
+                                    <input type="number" id="tempo-contribuicao" class="form-control" placeholder="Ex: 30" step="0.5" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tipo-aposentadoria">Tipo de Aposentadoria</label>
+                                    <select id="tipo-aposentadoria" class="form-control">
+                                        <option value="idade">Por Idade</option>
+                                        <option value="tempo">Por Tempo de Contribuição</option>
+                                        <option value="mista">Mista</option>
+                                        <option value="especial">Especial</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="idade">Idade Atual</label>
+                                    <input type="number" id="idade" class="form-control" placeholder="Ex: 60" required>
+                                </div>
+                                <button type="submit" class="btn">Calcular Estimativa</button>
+                            </form>
+                            <div class="calc-result" id="beneficioResult">
+                                <h4>Valor Estimado do Benefício:</h4>
+                                <div class="calc-value" id="beneficioValue">R$ 0,00</div>
+                                <p style="margin-top: 15px; font-size: 0.9rem; color: rgba(255,255,255,0.8);">Corresponde a aproximadamente <span id="percentualBeneficio">0</span>% da média salarial.</p>
+                                <p style="margin-top: 10px; font-size: 0.8rem; color: rgba(255,255,255,0.7);">*Valor estimado com base nas regras atuais. Consulte um especialista para análise detalhada.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="calculator" id="pensao-calc">
                             <h3>Estimativa de Pensão Alimentícia</h3>
                             <p style="font-size: 0.9rem; margin-bottom: 25px;">Esta é apenas uma estimativa baseada na jurisprudência comum. O valor final será determinado pelo juiz com base nas necessidades do alimentando e possibilidades do alimentante.</p>
                             <form id="pensaoForm">
@@ -1768,7 +1860,81 @@
             });
         });
 
-        // Form Calculators Logic
+        // CORREÇÃO: Botão "Simular Benefício" no banner leva para calculadora de benefício
+        document.querySelectorAll('a[href="#calculadoras"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Ativa a aba de Benefício Previdenciário
+                calcTabs.forEach(t => t.classList.remove('active'));
+                document.querySelector('.calculator-tab[data-target="beneficio-calc"]').classList.add('active');
+                
+                calculators.forEach(c => c.classList.remove('active'));
+                document.getElementById('beneficio-calc').classList.add('active');
+                
+                // Rola para a seção de calculadoras
+                document.getElementById('calculadoras').scrollIntoView({ 
+                    behavior: 'smooth' 
+                });
+            });
+        });
+
+        // Form Calculators Logic - NOVA CALCULADORA: Benefício Previdenciário
+        document.getElementById('beneficioForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const mediaSalarios = parseFloat(document.getElementById('media-salarios').value);
+            const tempoContribuicao = parseFloat(document.getElementById('tempo-contribuicao').value);
+            const tipoAposentadoria = document.getElementById('tipo-aposentadoria').value;
+            const idade = parseInt(document.getElementById('idade').value);
+            
+            if (isNaN(mediaSalarios) || isNaN(tempoContribuicao) || isNaN(idade)) {
+                alert('Por favor, preencha todos os campos corretamente.');
+                return;
+            }
+
+            let fator = 0.60; // Base 60%
+            let adicional = 0;
+            
+            // Cálculo baseado no tempo de contribuição
+            if (tempoContribuicao > 15) {
+                if (tempoContribuicao <= 20) {
+                    adicional = (tempoContribuicao - 15) * 0.02;
+                } else {
+                    adicional = 0.10 + (tempoContribuicao - 20) * 0.02;
+                }
+            }
+            
+            // Ajustes por tipo de aposentadoria
+            switch(tipoAposentadoria) {
+                case 'idade':
+                    if (idade >= 65) adicional += 0.05;
+                    break;
+                case 'tempo':
+                    if (tempoContribuicao >= 35) adicional += 0.10;
+                    break;
+                case 'mista':
+                    adicional += 0.03;
+                    break;
+                case 'especial':
+                    adicional += 0.15;
+                    break;
+            }
+            
+            let percentualFinal = fator + adicional;
+            if (percentualFinal > 1.0) percentualFinal = 1.0; // Teto de 100%
+            
+            const valorFinal = mediaSalarios * percentualFinal;
+            
+            document.getElementById('beneficioValue').textContent = `R$ ${valorFinal.toFixed(2).replace('.', ',')}`;
+            document.getElementById('percentualBeneficio').textContent = (percentualFinal * 100).toFixed(0);
+            document.getElementById('beneficioResult').style.display = 'block';
+            
+            // Scroll to result
+            document.getElementById('beneficioResult').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+
+        // Form Calculators Logic - Pensão Alimentícia
         document.getElementById('pensaoForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -1803,6 +1969,7 @@
             document.getElementById('pensaoResult').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         });
 
+        // Form Calculators Logic - Rescisão Trabalhista
         document.getElementById('indenizacaoForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
