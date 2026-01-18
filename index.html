@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+    <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -10,19 +11,19 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:wght@400;600;700&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            --primary: #0a192f; /* Azul marinho escuro - transmite confiança e autoridade */
+            --primary: #0a192f; /* Azul marinho escuro - profissionalismo */
             --primary-dark: #051123;
             --primary-light: #1a2f4f;
-            --secondary: #c9a959; /* Dourado elegante - transmite excelência e prestígio */
+            --secondary: #c9a959; /* Dourado - excelência */
             --secondary-dark: #b8941f;
-            --accent: #8b7355; /* Bronze - complementa o dourado */
+            --accent: #8b7355; /* Bronze - elegância */
             --light: #f8f9fa;
             --gray: #6c757d;
             --dark: #121212;
@@ -321,7 +322,7 @@
             z-index: 1001;
         }
 
-        /* Banner Slider - COM IMAGENS PROFISSIONAIS ATUALIZADAS */
+        /* Banner Slider - IMAGENS DIVERSIFICADAS E PROFISSIONAIS */
         .banner-section {
             margin-top: 100px;
             padding: 0;
@@ -362,21 +363,21 @@
             opacity: 1;
         }
 
-        /* IMAGENS PROFISSIONAIS ATUALIZADAS */
+        /* IMAGENS DIVERSIFICADAS PARA O BANNER */
         .banner-slide:nth-child(1) {
             background-image: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
         }
 
         .banner-slide:nth-child(2) {
-            background-image: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
-        }
-
-        .banner-slide:nth-child(3) {
             background-image: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1563461660947-5075664b9d8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80');
         }
 
+        .banner-slide:nth-child(3) {
+            background-image: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1560073744-7643b964ca61?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+        }
+
         .banner-slide:nth-child(4) {
-            background-image: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-image: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1589391886085-8b6b0ac72a1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
         }
 
         .slide-content {
@@ -503,12 +504,31 @@
         /* Features */
         .features {
             background-color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .features:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=5');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.03;
+            border-radius: 50%;
+            transform: translate(30%, -30%);
         }
 
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 40px;
+            position: relative;
+            z-index: 1;
         }
 
         .feature-card {
@@ -612,12 +632,31 @@
         /* Áreas de Atuação */
         .areas {
             background-color: var(--light-bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .areas:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=5');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.03;
+            border-radius: 50%;
+            transform: translate(-30%, 30%);
         }
 
         .areas-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 35px;
+            position: relative;
+            z-index: 1;
         }
 
         .area-card {
@@ -658,9 +697,9 @@
             opacity: 0.2;
         }
 
-        /* IMAGENS ESPECÍFICAS ATUALIZADAS PARA CADA ÁREA */
+        /* IMAGENS DIVERSIFICADAS PARA CADA ÁREA */
         .area-card:nth-child(1) .area-image {
-            background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1589216532372-1c2a367900d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80');
         }
         
         .area-card:nth-child(2) .area-image {
@@ -672,15 +711,15 @@
         }
         
         .area-card:nth-child(4) .area-image {
-            background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
         }
         
         .area-card:nth-child(5) .area-image {
-            background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
         }
         
         .area-card:nth-child(6) .area-image {
-            background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1593115057322-e94b77572f20?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80');
         }
 
         .area-content {
@@ -730,12 +769,31 @@
         /* Artigos */
         .articles {
             background-color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .articles:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background: url('https://images.unsplash.com/photo-1589216532372-1c2a367900d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=5');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.03;
+            border-radius: 50%;
+            transform: translate(30%, -30%);
         }
 
         .articles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 35px;
+            position: relative;
+            z-index: 1;
         }
 
         .article-card {
@@ -777,21 +835,21 @@
             opacity: 0.2;
         }
 
-        /* IMAGENS ATUALIZADAS PARA ARTIGOS */
+        /* IMAGENS DIVERSIFICADAS PARA ARTIGOS */
         .article-card:nth-child(1) .article-image {
             background-image: url('https://images.unsplash.com/photo-1589216532372-1c2a367900d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80');
         }
         
         .article-card:nth-child(2) .article-image {
-            background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2022&q=80');
         }
         
         .article-card:nth-child(3) .article-image {
-            background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1589578527966-fdac0f44566c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
         }
         
         .article-card:nth-child(4) .article-image {
-            background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2076&q=80');
         }
 
         .article-content {
@@ -844,11 +902,30 @@
         /* Calculadoras */
         .calculators-section {
             background-color: var(--light-bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calculators-section:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=5');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.03;
+            border-radius: 50%;
+            transform: translate(-30%, 30%);
         }
 
         .calculators-container {
             max-width: 900px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         .calculator-tabs {
@@ -1118,6 +1195,40 @@
             transform: scale(1.1) rotate(5deg);
             box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
             animation: none;
+        }
+
+        /* Certificados e Credenciais */
+        .credenciais-section {
+            background-color: white;
+            padding: 80px 0;
+        }
+
+        .credenciais-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .credencial-item {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .credencial-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .credencial-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
         }
 
         /* Animations */
@@ -1401,7 +1512,7 @@
     <section class="banner-section" id="home">
         <div class="banner-slider">
             <div class="banner-slides">
-                <!-- Slide 1 -->
+                <!-- Slide 1 - Escritório Moderno -->
                 <div class="banner-slide active">
                     <div class="slide-content">
                         <h1>Defesa Jurídica Estratégica em Salvador</h1>
@@ -1410,7 +1521,7 @@
                     </div>
                 </div>
                 
-                <!-- Slide 2 -->
+                <!-- Slide 2 - Reunião Profissional -->
                 <div class="banner-slide">
                     <div class="slide-content">
                         <h1>Escritório de Advocacia com Excelência</h1>
@@ -1419,7 +1530,7 @@
                     </div>
                 </div>
                 
-                <!-- Slide 3 -->
+                <!-- Slide 3 - Biblioteca Jurídica -->
                 <div class="banner-slide">
                     <div class="slide-content">
                         <h1>Atendimento Personalizado e Humanizado</h1>
@@ -1428,7 +1539,7 @@
                     </div>
                 </div>
                 
-                <!-- Slide 4 -->
+                <!-- Slide 4 - Documentos Jurídicos -->
                 <div class="banner-slide">
                     <div class="slide-content">
                         <h1>Resultados que Fazem a Diferença</h1>
@@ -1469,6 +1580,50 @@
                 <a href="https://wa.me/5571981303910" class="btn btn-outline" target="_blank">
                     <i class="fab fa-whatsapp"></i> WhatsApp (71) 98130-3910
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credenciais -->
+    <section class="credenciais-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Credenciais e Reconhecimento</h2>
+                <p>Profissionalismo e excelência reconhecidos no meio jurídico</p>
+            </div>
+            
+            <div class="credenciais-grid">
+                <div class="credencial-item fade-in">
+                    <div class="credencial-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>OAB/BA 61.507</h3>
+                    <p>Advogado ativo e em pleno exercício na Ordem dos Advogados do Brasil - Seção Bahia</p>
+                </div>
+                
+                <div class="credencial-item fade-in">
+                    <div class="credencial-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Especialização</h3>
+                    <p>Pós-graduado em Direito Previdenciário pela Universidade Salgado de Oliveira</p>
+                </div>
+                
+                <div class="credencial-item fade-in">
+                    <div class="credencial-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>+500 Casos</h3>
+                    <p>Mais de 500 processos resolvidos com sucesso em diversas áreas do direito</p>
+                </div>
+                
+                <div class="credencial-item fade-in">
+                    <div class="credencial-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>95% de Sucesso</h3>
+                    <p>Taxa de aprovação de 95% em processos judiciais, comprovando eficiência</p>
+                </div>
             </div>
         </div>
     </section>
