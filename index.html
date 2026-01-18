@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -360,7 +360,7 @@
             opacity: 1;
         }
 
-        /* IMAGENS DO BANNER - CORRIGIDO BANNER 4 */
+        /* IMAGENS DO BANNER - CORRIGIDO BANNER 4 COM IMAGEM */
         .banner-slide:nth-child(1) {
             background-image: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
         }
@@ -373,8 +373,8 @@
             background-image: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
         }
 
-        /* Banner 4 Corrigido com imagem de Livros/Justiça */
         .banner-slide:nth-child(4) {
+            /* Imagem adicionada conforme solicitado */
             background-image: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1589994965851-a8f479c573a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
         }
 
@@ -541,10 +541,52 @@
             box-shadow: 0 10px 20px rgba(201, 169, 89, 0.3);
         }
 
+        /* Sobre */
+        .sobre-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .sobre-img {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            height: 550px;
+            /* FOTO GENÉRICA JURÍDICA para substituição futura */
+            background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1632&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .sobre-text h2 {
+            margin-bottom: 30px;
+        }
+
+        .sobre-list {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .sobre-list li {
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+
+        .sobre-list i {
+            color: var(--secondary);
+            margin-right: 15px;
+            font-size: 1.3rem;
+        }
+
         /* Areas of Practice */
         .areas-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 30px;
         }
 
@@ -581,18 +623,17 @@
             background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.4));
         }
         
-        /* Imagens Específicas das Áreas */
         .area-card:nth-child(1) .area-image {
-            background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1589216532372-1c2a367900d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80');
         }
 
-        /* CORREÇÃO: Adicionada imagem para Direito Trabalhista (Área 2) */
+        /* CORREÇÃO: Imagem adicionada na Área 2 (Trabalhista) */
         .area-card:nth-child(2) .area-image {
             background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=1469&q=80');
         }
 
         .area-card:nth-child(3) .area-image {
-            background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80');
+            background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
         }
 
         .area-content {
@@ -677,6 +718,10 @@
         .article-card:nth-child(3) .article-image {
             background-image: url('https://images.unsplash.com/photo-1593115057322-e94b77572f20?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80');
         }
+        
+        .article-card:nth-child(4) .article-image {
+            background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+        }
 
         .article-content {
             padding: 35px;
@@ -704,6 +749,7 @@
             text-decoration: none;
             margin-top: 20px;
             transition: var(--transition);
+            cursor: pointer;
         }
 
         .article-link:hover {
@@ -780,6 +826,26 @@
             background-color: var(--primary);
             color: white;
             gap: 15px;
+        }
+        
+        .article-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .article-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .article-list li:before {
+            content: '•';
+            color: var(--secondary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
         }
 
         /* Calculators */
@@ -1197,23 +1263,29 @@
                     <h2>Sobre o Dr. Lourival Oliveira</h2>
                     <p>Dedicação exclusiva e atendimento humanizado para garantir o melhor resultado para o seu caso.</p>
                 </div>
-                <div class="contact-grid" style="align-items: center;">
-                    <div class="about-image" style="border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); height: 500px; background: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80') center/cover;"></div>
-                    <div class="about-content">
+                <div class="sobre-container">
+                    <div class="sobre-img"></div>
+                    <div class="sobre-text">
                         <h3>Excelência Jurídica em Salvador</h3>
                         <p>Com mais de uma década de atuação, o escritório do Dr. Lourival Oliveira se consolidou como referência em Direito Previdenciário e Trabalhista em Salvador e região.</p>
                         <p>Nossa missão é proporcionar justiça social através de um atendimento técnico, ético e, acima de tudo, humano. Entendemos que por trás de cada processo existe uma vida, uma história e uma necessidade.</p>
                         
-                        <div class="credenciais-grid" style="margin-top: 30px; grid-template-columns: 1fr 1fr;">
-                            <div class="credencial-item" style="text-align: left; padding: 0;">
+                        <div class="credenciais-grid" style="margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div class="credencial-item" style="text-align: left; padding: 0; box-shadow: none; border: none;">
                                 <h4 style="color: var(--secondary); font-size: 2.5rem; margin-bottom: 0;">+10</h4>
                                 <p>Anos de Experiência</p>
                             </div>
-                            <div class="credencial-item" style="text-align: left; padding: 0;">
+                            <div class="credencial-item" style="text-align: left; padding: 0; box-shadow: none; border: none;">
                                 <h4 style="color: var(--secondary); font-size: 2.5rem; margin-bottom: 0;">+2000</h4>
                                 <p>Casos Resolvidos</p>
                             </div>
                         </div>
+                        
+                        <ul class="sobre-list">
+                            <li><i class="fas fa-check-circle"></i> Especialista em Direito Previdenciário</li>
+                            <li><i class="fas fa-check-circle"></i> Atendimento personalizado</li>
+                            <li><i class="fas fa-check-circle"></i> Foco total em resultados</li>
+                        </ul>
                         
                         <a href="#contato" class="btn" style="margin-top: 40px;">Agendar Atendimento</a>
                     </div>
@@ -1265,11 +1337,11 @@
                             <h3><i class="fas fa-home area-icon"></i> Direito Civil</h3>
                             <p>Atuação em questões contratuais, responsabilidade civil, indenizações, direito de família, sucessões, inventários e consumidor.</p>
                             <ul class="area-list">
-                                <li><i class="fas fa-check"></i> Divórcios e Pensão Alimentícia</li>
-                                <li><i class="fas fa-check"></i> Inventários e Testamentos</li>
-                                <li><i class="fas fa-check"></i> Indenizações por Danos</li>
-                                <li><i class="fas fa-check"></i> Contratos e Distratos</li>
-                                <li><i class="fas fa-check"></i> Direito do Consumidor</li>
+                                <li><i class="fas fa-check"></i> Contratos em geral</li>
+                                <li><i class="fas fa-check"></i> Responsabilidade civil</li>
+                                <li><i class="fas fa-check"></i> Direito de família (divórcio, pensão, guarda)</li>
+                                <li><i class="fas fa-check"></i> Inventário e partilha de bens</li>
+                                <li><i class="fas fa-check"></i> Usucapião e direito de propriedade</li>
                             </ul>
                         </div>
                     </div>
@@ -1321,6 +1393,19 @@
                             <h3>Inventário Extrajudicial: Rapidez e Economia</h3>
                             <p>Saiba quando é possível realizar o inventário em cartório, economizando tempo e recursos da família.</p>
                             <a href="#" class="article-link" onclick="loadArticle('artigo3'); return false;">Ler Artigo <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                     <div class="article-card fade-in">
+                        <div class="article-image"></div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-tag">Consumidor</span>
+                                <span>28 Jan 2026</span>
+                            </div>
+                            <h3>Direito de Arrependimento e Compras Online</h3>
+                            <p>Conheça seus direitos ao fazer compras pela internet e como exercer o direito de arrependimento.</p>
+                            <a href="#" class="article-link" onclick="loadArticle('artigo4'); return false;">Ler Artigo <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1418,7 +1503,7 @@
                             <div class="contact-details">
                                 <h4>Nosso Escritório</h4>
                                 <p>Av. Tancredo Neves, 1234, Sala 505</p>
-                                <p>Caminho das Árvores, Salvador - BA</p>
+                                <p>Salvador - BA</p>
                             </div>
                         </div>
                         
@@ -1566,17 +1651,13 @@
             });
         });
 
-        // CORREÇÃO DOS MENUS: Monitoramento de cliques no menu para fechar artigo se estiver aberto
-        document.querySelectorAll('.nav-menu a, .mobile-menu a').forEach(link => {
+        // CORREÇÃO DOS MENUS: Fecha o artigo se estiver aberto ao clicar no menu
+        document.querySelectorAll('.nav-menu a, .logo').forEach(link => {
             link.addEventListener('click', function(e) {
                 const articleContent = document.getElementById('article-content');
-                // Se o artigo estiver visível
+                // Se o artigo estiver visível, fecha e volta para home
                 if(articleContent.style.display === 'block') {
-                    // Executa a função de voltar para home
                     backToHome();
-                    
-                    // Pequeno delay para permitir a troca de display antes do scroll nativo
-                    // O comportamento padrão do <a> (href="#...") acontecerá em seguida
                 }
             });
         });
@@ -1763,8 +1844,7 @@
                 behavior: 'smooth'
             });
 
-            // Simulando conteúdo de artigos
-            // DATAS ATUALIZADAS PARA JANEIRO DE 2026
+            // ARTIGOS COMPLETOS RECUPERADOS E RESTAURADOS
             if (articleId === 'artigo1') {
                 articleHTML = `
                 <section class="article-page">
@@ -1782,24 +1862,46 @@
                     </div>
                     <div class="container">
                         <div class="article-body">
-                            <p>A Reforma da Previdência trouxe mudanças profundas na forma como os brasileiros se aposentam. As novas regras, em vigor desde 2019, continuam gerando dúvidas.</p>
+                            <p>A Reforma da Previdência, consolidada pela Emenda Constitucional nº 103/2019, trouxe mudanças profundas na forma como os brasileiros se aposentam. As novas regras, embora já estejam em vigor, continuam gerando muitas dúvidas, especialmente para aqueles que estavam próximos de se aposentar.</p>
                             
-                            <h2>Principais Mudanças</h2>
-                            <h3>1. Idade Mínima</h3>
-                            <p>A nova reforma estabelece idade mínima de 65 anos para homens e 62 anos para mulheres, com pelo menos 15 anos de contribuição.</p>
+                            <p>Neste artigo completo, vamos detalhar as principais alterações e como elas impactam diretamente o seu planejamento de aposentadoria.</p>
+                            
+                            <h2>Principais Mudanças Estruturais</h2>
+                            
+                            <h3>1. Idade Mínima Progressiva</h3>
+                            <p>Uma das mudanças mais significativas foi a instituição da idade mínima como regra geral. Anteriormente, era possível se aposentar apenas por tempo de contribuição, independentemente da idade.</p>
+                            <p>Com a nova regra, a idade mínima passou a ser de <strong>65 anos para homens</strong> e <strong>62 anos para mulheres</strong>. No entanto, para quem já estava no mercado de trabalho, essa idade sobe progressivamente a cada ano até atingir esses patamares.</p>
                             
                             <h3>2. Tempo de Contribuição</h3>
-                            <p>O tempo mínimo de contribuição passa a ser de 20 anos para homens (para novos entrantes) e 15 para mulheres.</p>
+                            <p>O tempo mínimo de contribuição também sofreu alterações. Para homens que ingressaram no mercado de trabalho após a reforma, o tempo mínimo exigido passou para <strong>20 anos</strong>. Para as mulheres, manteve-se em 15 anos. Para os trabalhadores já filiados ao INSS antes da reforma, o tempo mínimo permanece em 15 anos para ambos os sexos, mas isso impacta o valor final do benefício.</p>
                             
-                            <h3>3. Cálculo do Benefício</h3>
-                            <p>O cálculo agora considera a média de todas as contribuições, sem descartar as 20% menores.</p>
+                            <h3>3. Novo Cálculo do Benefício</h3>
+                            <p>Talvez a mudança mais impactante no bolso do trabalhador seja a nova forma de cálculo. Antes, o INSS considerava a média das 80% maiores contribuições, descartando as 20% menores (o que aumentava a média). Agora, a regra considera a <strong>média de 100% de todas as contribuições</strong> desde julho de 1994.</p>
+                            <p>Além disso, o valor da aposentadoria será de 60% dessa média, mais 2% para cada ano que exceder 20 anos de contribuição (para homens) ou 15 anos (para mulheres). Isso significa que, para receber 100% da média salarial, um homem precisará contribuir por 40 anos.</p>
                             
                             <div class="article-quote">
-                                "O planejamento previdenciário tornou-se indispensável para garantir o melhor benefício possível."
+                                "O planejamento previdenciário tornou-se indispensável. Com as novas regras, aposentar-se no momento errado pode significar uma perda irreversível de mais de 30% no valor do benefício vitalício."
                             </div>
                             
-                            <h2>Regras de Transição</h2>
-                            <p>Para quem já estava no mercado de trabalho, existem diversas regras de transição (pedágio 50%, 100%, pontos). É crucial analisar caso a caso.</p>
+                            <h2>Regras de Transição: Qual é a sua?</h2>
+                            <p>Para quem já estava contribuindo antes de novembro de 2019, foram criadas diversas regras de transição. Identificar a melhor para o seu caso é crucial:</p>
+                            
+                            <ul class="article-list">
+                                <li><strong>Sistema de Pontos:</strong> Soma-se a idade com o tempo de contribuição. A pontuação necessária sobe 1 ponto a cada ano.</li>
+                                <li><strong>Pedágio de 50%:</strong> Para quem faltava menos de 2 anos para se aposentar na data da reforma. É necessário trabalhar o tempo que faltava mais 50% desse tempo.</li>
+                                <li><strong>Pedágio de 100%:</strong> Exige idade mínima de 57 anos (mulher) e 60 anos (homem), pagando um pedágio de 100% do tempo que faltava. A vantagem desta regra é que o valor do benefício costuma ser maior (100% da média).</li>
+                                <li><strong>Idade Progressiva:</strong> A exigência de idade sobe 6 meses a cada ano.</li>
+                            </ul>
+
+                            <h2>Impactos para Diferentes Categorias</h2>
+                            
+                            <h3>Trabalhadores Rurais</h3>
+                            <p>Para os trabalhadores rurais, as regras de idade (60 anos homem, 55 mulher) e tempo de contribuição (15 anos) foram mantidas, reconhecendo a especificidade e a penosidade do trabalho no campo.</p>
+                            
+                            <h3>Professores</h3>
+                            <p>Professores da rede básica de ensino continuam com regras especiais, podendo se aposentar com 5 anos a menos na idade e no tempo de contribuição em relação à regra geral, mas também foram afetados pelas novas formas de cálculo.</p>
+                            
+                            <p>Em suma, a Reforma da Previdência exige que o trabalhador esteja muito mais atento e informado. Buscar a orientação de um advogado especialista em Direito Previdenciário não é apenas um custo, mas um investimento para garantir a melhor renda possível para o resto da vida.</p>
                             
                             <a href="#" class="back-to-articles" onclick="backToHome(); return false;">
                                 <i class="fas fa-arrow-left"></i> Voltar para Página Inicial
@@ -1825,17 +1927,30 @@
                     </div>
                     <div class="container">
                         <div class="article-body">
-                            <p>O teletrabalho ou home office foi regulamentado e possui regras específicas na CLT que precisam ser observadas.</p>
+                            <p>O teletrabalho, popularmente conhecido como home office, deixou de ser uma exceção para se tornar a regra em muitas empresas, especialmente após a pandemia. Com essa mudança de paradigma, surgiram também novas legislações e entendimentos jurídicos na CLT que precisam ser observados tanto por empregadores quanto por empregados.</p>
                             
-                            <h2>Contrato de Trabalho</h2>
-                            <p>A modalidade deve constar expressamente no contrato de trabalho, especificando as atividades realizadas.</p>
+                            <h2>O Que Diz a Lei (Lei 14.442/2022)</h2>
+                            <p>A legislação trabalhista foi atualizada para regulamentar melhor o trabalho remoto. É importante destacar que o teletrabalho deve constar expressamente no contrato de trabalho ou em aditivo contratual. Não basta um acordo verbal; as condições devem estar escritas.</p>
                             
-                            <h2>Equipamentos e Custos</h2>
-                            <p>O contrato deve prever quem será responsável pela aquisição, manutenção e fornecimento dos equipamentos tecnológicos.</p>
+                            <h3>Controle de Jornada</h3>
+                            <p>Uma das maiores dúvidas diz respeito ao controle de ponto. A nova lei estabelece que trabalhadores em regime de teletrabalho por produção ou tarefa não estão sujeitos ao controle de jornada (e, portanto, não recebem horas extras). Contudo, se a empresa exige cumprimento de horário fixo, logins em horas específicas e monitora a jornada, o direito a horas extras, adicional noturno e intervalos intrajornada permanece inalterado.</p>
+                            
+                            <h2>Equipamentos e Custos: Quem Paga a Conta?</h2>
+                            <p>O contrato deve prever expressamente quem será responsável pela aquisição, manutenção e fornecimento dos equipamentos tecnológicos (computador, monitor, internet) e da infraestrutura necessária e adequada à prestação do trabalho remoto.</p>
+                            <p>A lei permite que as empresas paguem uma "ajuda de custo" para cobrir despesas como energia elétrica e internet. É importante salientar que esta ajuda de custo tem natureza indenizatória, ou seja, não integra o salário para fins de impostos ou FGTS, o que é vantajoso para ambas as partes.</p>
                             
                             <div class="article-quote">
-                                "O direito à desconexão é fundamental para a saúde mental do trabalhador remoto."
+                                "O direito à desconexão é fundamental. O fato de trabalhar em casa não significa estar disponível 24 horas por dia. Mensagens fora do horário podem configurar tempo à disposição e gerar passivo trabalhista."
                             </div>
+                            
+                            <h2>Ergonomia e Saúde no Trabalho</h2>
+                            <p>Mesmo em casa, as normas de saúde e segurança do trabalho devem ser respeitadas. O empregador deve orientar os empregados sobre as precauções a tomar a fim de evitar doenças e acidentes de trabalho, especialmente as relacionadas à ergonomia (LER/DORT).</p>
+                            <p>Doenças desenvolvidas por má postura ou condições inadequadas de trabalho em casa podem ser equiparadas a acidentes de trabalho, gerando estabilidade e dever de indenizar.</p>
+                            
+                            <h2>Modelo Híbrido</h2>
+                            <p>O modelo híbrido também foi regulamentado. A presença do trabalhador no ambiente de trabalho para tarefas específicas, ainda que de modo habitual, não descaracteriza o regime de teletrabalho.</p>
+
+                            <p>Se você trabalha em home office e sente que seus direitos não estão sendo respeitados, ou se sua empresa não formalizou as condições de trabalho e custos, procure orientação jurídica especializada.</p>
 
                             <a href="#" class="back-to-articles" onclick="backToHome(); return false;">
                                 <i class="fas fa-arrow-left"></i> Voltar para Página Inicial
@@ -1861,15 +1976,95 @@
                     </div>
                     <div class="container">
                         <div class="article-body">
-                            <p>O inventário extrajudicial é feito em cartório, sendo muito mais rápido que o judicial. Porém, exige requisitos específicos.</p>
+                            <p>Perder um ente querido é um momento extremamente delicado. Além do luto, a família precisa lidar com questões burocráticas complexas, sendo o inventário a principal delas. Felizmente, a legislação brasileira permite, desde 2007, a realização do inventário extrajudicial, feito diretamente em cartório, sem a necessidade de um longo processo judicial.</p>
                             
-                            <h2>Requisitos</h2>
-                            <ul style="margin-bottom: 30px;">
-                                <li>Todos os herdeiros devem ser maiores e capazes.</li>
-                                <li>Deve haver consenso entre os herdeiros quanto à partilha.</li>
-                                <li>Não pode haver testamento (em regra, mas há exceções em alguns estados).</li>
-                                <li>Presença obrigatória de advogado.</li>
+                            <h2>Vantagens do Inventário em Cartório</h2>
+                            <p>A principal vantagem é a <strong>agilidade</strong>. Enquanto um inventário judicial pode levar anos (às vezes décadas) arrastando-se nos tribunais, o extrajudicial pode ser concluído em questão de semanas ou poucos meses, dependendo apenas da reunião dos documentos e do pagamento dos impostos.</p>
+                            <p>Outra vantagem é o <strong>custo</strong>, que tende a ser menor, e a menor burocracia emocional, poupando a família de desgastes prolongados.</p>
+                            
+                            <h2>Requisitos Obrigatórios</h2>
+                            <p>Para optar por essa via mais rápida, é necessário cumprir cumulativamente os seguintes requisitos:</p>
+                            <ul class="article-list">
+                                <li><strong>Consenso:</strong> Todos os herdeiros devem estar em pleno acordo sobre a partilha dos bens. Se houver qualquer disputa, o caso deve ir para o Judiciário.</li>
+                                <li><strong>Capacidade:</strong> Todos os herdeiros devem ser maiores de idade e capazes civilmente.</li>
+                                <li><strong>Inexistência de Testamento:</strong> Em regra, não pode haver testamento deixado pelo falecido. (Nota: Em alguns estados, a jurisprudência já permite o extrajudicial mesmo com testamento, desde que haja autorização judicial prévia, mas a regra geral é a inexistência).</li>
+                                <li><strong>Advogado:</strong> A presença de um advogado é obrigatória por lei. As partes podem ter advogados distintos ou um único advogado para todos, o que geralmente reduz custos.</li>
                             </ul>
+                            
+                            <h2>Passo a Passo Simplificado</h2>
+                            
+                            <h3>1. Escolha do Advogado e Cartório</h3>
+                            <p>O primeiro passo é contratar um advogado especializado em Direito de Sucessões. O inventário pode ser aberto em qualquer Cartório de Notas, independentemente do domicílio do falecido ou da localização dos bens.</p>
+                            
+                            <h3>2. Nomeação do Inventariante</h3>
+                            <p>A família escolhe quem será o representante do espólio (inventariante) para administrar os bens e pagar as dívidas até a conclusão da partilha.</p>
+                            
+                            <h3>3. Levantamento de Bens e Dívidas</h3>
+                            <p>Devem ser listados todos os imóveis, veículos, contas bancárias, investimentos e também as dívidas deixadas pelo falecido.</p>
+                            
+                            <h3>4. Pagamento do ITCMD</h3>
+                            <p>O Imposto de Transmissão Causa Mortis e Doação (ITCMD) deve ser declarado e pago antes da lavratura da escritura. A alíquota varia de estado para estado (na Bahia, por exemplo, varia conforme o valor dos bens).</p>
+                            
+                            <h3>5. Lavratura da Escritura</h3>
+                            <p>Após a conferência de documentos e pagamento do imposto, o tabelião lavra a Escritura Pública de Inventário e Partilha. Com esse documento em mãos, os herdeiros podem proceder aos registros nos cartórios de imóveis e transferências bancárias, sem necessidade de autorização judicial.</p>
+                            
+                            <a href="#" class="back-to-articles" onclick="backToHome(); return false;">
+                                <i class="fas fa-arrow-left"></i> Voltar para Página Inicial
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                `;
+            } else if (articleId === 'artigo4') {
+                articleHTML = `
+                <section class="article-page">
+                    <div class="article-header">
+                        <div class="container">
+                            <div class="article-meta">
+                                <span class="article-tag">Consumidor</span>
+                                <span>28 Jan 2026</span>
+                            </div>
+                            <h1>Direito de Arrependimento e Compras Online</h1>
+                            <p class="article-author">
+                                <i class="fas fa-user-tie"></i> Por Dr. Lourival Oliveira
+                            </p>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="article-body">
+                            <p>Com o crescimento exponencial do comércio eletrônico, as compras online tornaram-se parte do nosso cotidiano. No entanto, muitas vezes o produto que chega em casa não corresponde às expectativas geradas pela foto ou descrição no site. Para proteger o consumidor nessa situação de vulnerabilidade, o Código de Defesa do Consumidor (CDC) prevê uma ferramenta poderosa: o Direito de Arrependimento.</p>
+                            
+                            <h2>O Que é o Direito de Arrependimento (Art. 49 do CDC)</h2>
+                            <p>O artigo 49 do CDC estabelece que o consumidor pode desistir do contrato, no prazo de <strong>7 dias</strong> a contar de sua assinatura ou do ato de recebimento do produto ou serviço, sempre que a contratação ocorrer fora do estabelecimento comercial (internet, telefone, catálogo, venda a domicílio).</p>
+                            
+                            <h3>Por que existe esse prazo?</h3>
+                            <p>A lei entende que, comprando à distância, o consumidor não tem a oportunidade de manusear, testar ou avaliar adequadamente o produto. Os 7 dias servem como um período de reflexão.</p>
+                            
+                            <h2>Regras Fundamentais</h2>
+                            
+                            <h3>1. Não precisa de justificativa</h3>
+                            <p>Muitos consumidores acham que precisam provar que o produto tem defeito para devolver. Isso é um mito no caso de compras online. Dentro do prazo de 7 dias, você pode devolver o produto simplesmente porque não gostou da cor, do tamanho, ou porque se arrependeu da compra. Não é necessário apresentar defeito.</p>
+                            
+                            <h3>2. Devolução total dos valores</h3>
+                            <p>Se o consumidor exercitar o direito de arrependimento, os valores eventualmente pagos, a qualquer título, durante o prazo de reflexão, serão devolvidos, de imediato, monetariamente atualizados.</p>
+                            
+                            <h3>3. E o frete?</h3>
+                            <p>Uma dúvida comum: quem paga o frete da devolução? O entendimento consolidado é que <strong>todas as despesas correm por conta do vendedor</strong>. O consumidor não pode ter nenhum prejuízo financeiro por exercer um direito legal. Se a loja cobrar frete de devolução, essa cobrança é abusiva.</p>
+                            
+                            <h2>Informações Obrigatórias no E-commerce</h2>
+                            <p>Para garantir a segurança nas compras, o Decreto do Comércio Eletrônico (Decreto 7.962/2013) exige que os sites forneçam:</p>
+                            <ul class="article-list">
+                                <li>Identificação completa do fornecedor (Razão Social, CNPJ, Endereço físico e eletrônico).</li>
+                                <li>Descrição clara das características essenciais do produto ou serviço.</li>
+                                <li>Informações claras sobre preço, formas de pagamento e prazos de entrega.</li>
+                            </ul>
+                            
+                            <div class="article-quote">
+                                "O direito ao arrependimento é inegociável. Cláusulas contratuais que tentam limitar esse direito ou impor multas pela desistência em compras online são nulas de pleno direito."
+                            </div>
+                            
+                            <h2>Produtos Personalizados e Conteúdo Digital</h2>
+                            <p>Existem discussões jurídicas sobre produtos feitos sob encomenda/personalizados e produtos de consumo imediato (como delivery de comida). Nesses casos, o bom senso e a jurisprudência têm ponderado a aplicação irrestrita do artigo 49 para evitar má-fé ou enriquecimento ilícito, mas a regra geral de proteção ao vulnerável prevalece na maioria dos casos de produtos padronizados.</p>
                             
                             <a href="#" class="back-to-articles" onclick="backToHome(); return false;">
                                 <i class="fas fa-arrow-left"></i> Voltar para Página Inicial
